@@ -8,11 +8,37 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "SEBI Registered Stock Brokers in India | Complete Directory 2026",
-    template: "%s | SEBI Brokers Directory",
+    default: "NiveshCheck – SEBI Registered Stock Brokers in India",
+    template: "%s | NiveshCheck",
   },
   description:
-    "Find verified SEBI registered stock brokers and demat account providers in India. Compare brokers by city, charges, segments and active clients.",
+    "Check and compare SEBI registered stock brokers in India. Find discount and full-service brokers, best brokers by city, and more on NiveshCheck.",
+  keywords: [
+    "SEBI registered brokers",
+    "stock brokers in India",
+    "demat account",
+    "discount brokers",
+    "full service brokers",
+    "best stock brokers",
+    "NiveshCheck",
+  ],
+  openGraph: {
+    title: "NiveshCheck – SEBI Registered Stock Brokers in India",
+    description:
+      "Discover and compare SEBI registered stock brokers. Find the right broker for your needs.",
+    url: "https://niveshcheck.vercel.app",
+    siteName: "NiveshCheck",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NiveshCheck – SEBI Registered Stock Brokers",
+    description: "Check SEBI registered stock brokers in India.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
