@@ -27,8 +27,8 @@ export default function Header() {
           <Link href="/best-stock-brokers-for-beginners" className="hover:text-blue-600 transition">
             For Beginners
           </Link>
-          <Link href="/top-stock-brokers-by-clients" className="hover:text-blue-600 transition">
-            Top by Clients
+          <Link href="/faq" className="hover:text-blue-600 transition">
+            FAQ
           </Link>
         </nav>
 
@@ -71,6 +71,9 @@ export default function Header() {
             </Link>
             <Link href="/fno-brokers" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
               F&O Brokers
+            </Link>
+            <Link href="/faq" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
+              FAQ
             </Link>
           </nav>
         </div>
