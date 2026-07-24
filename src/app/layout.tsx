@@ -8,28 +8,21 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.niveshcheck.in"),
   title: {
     default: "NiveshCheck – SEBI Registered Stock Brokers in India",
     template: "%s | NiveshCheck",
   },
   description:
     "Check and compare SEBI registered stock brokers in India. Find discount and full-service brokers, best brokers by city, and more on NiveshCheck.",
-  keywords: [
-    "SEBI registered brokers",
-    "stock brokers in India",
-    "demat account",
-    "discount brokers",
-    "full service brokers",
-    "best stock brokers",
-    "NiveshCheck",
-  ],
   openGraph: {
     title: "NiveshCheck – SEBI Registered Stock Brokers in India",
     description:
       "Discover and compare SEBI registered stock brokers. Find the right broker for your needs.",
-    url: "https://niveshcheck.in",
+    url: "https://www.niveshcheck.in",
     siteName: "NiveshCheck",
     type: "website",
+    locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
