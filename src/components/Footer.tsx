@@ -39,22 +39,27 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/top-stock-brokers-by-clients" className="hover:text-white transition">
-                  Top by Active Clients
-                </Link>
-              </li>
-              <li>
-                <Link href="/best/mumbai" className="hover:text-white transition">
-                  Best Brokers in Mumbai
+                <Link href="/faq" className="hover:text-white transition">
+                  FAQ
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Company */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/about" className="hover:text-white transition">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/methodology" className="hover:text-white transition">
+                  Methodology
+                </Link>
+              </li>
               <li>
                 <Link href="/disclaimer" className="hover:text-white transition">
                   Disclaimer
