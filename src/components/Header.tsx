@@ -8,9 +8,17 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-blue-700 tracking-tight">
-          NiveshCheck
+      <div className="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2.5 group">
+          {/* Icon */}
+          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-700 to-teal-600 flex items-center justify-center shadow-sm">
+            <span className="text-white font-bold text-sm tracking-tight">NC</span>
+          </div>
+          {/* Wordmark */}
+          <span className="text-xl font-bold text-gray-900 tracking-tight group-hover:text-blue-700 transition">
+            Nivesh<span className="text-teal-600">Check</span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}
