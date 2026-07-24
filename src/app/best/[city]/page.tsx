@@ -25,8 +25,8 @@ export async function generateMetadata({
     .join(" ");
 
   return {
-    title: `Best Stock Brokers in ${cityName} (2026) | SEBI Registered`,
-    description: `Find the best SEBI registered stock brokers in ${cityName}. Compare discount and full-service brokers available in ${cityName}.`,
+    title: `Best Stock Brokers in ${cityName} (2026)`,
+    description: `Find the best SEBI registered stock brokers in ${cityName}. Compare discount and full-service brokers based in ${cityName} before opening a demat account.`,
   };
 }
 
@@ -47,12 +47,15 @@ export default async function BestBrokersInCityPage({
 
   if (cityBrokers.length === 0) notFound();
 
-  // Put brokers with active client numbers first
+  // Prioritise brokers that have active client data
   const sortedBrokers = [...cityBrokers].sort((a, b) => {
     if (a.activeClients && !b.activeClients) return -1;
     if (!a.activeClients && b.activeClients) return 1;
     return 0;
   });
+
+  const topBrokers = sortedBrokers.slice(0, 3);
+  const remainingBrokers = sortedBrokers.slice(3);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -70,15 +73,21 @@ export default async function BestBrokersInCityPage({
       </nav>
 
       {/* Header */}
-      <div className="mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+      <div className="mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5 leading-tight">
           Best Stock Brokers in {cityName} (2026)
         </h1>
-        <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
-          Looking for the best SEBI registered stock brokers in {cityName}? 
-          Here is a curated list of verified brokers based in {cityName}. 
-          Compare discount and full-service options before opening a demat account.
-        </p>
+
+        <div className="prose prose-gray max-w-3xl text-gray-600 leading-relaxed space-y-4">
+          <p>
+            Looking for the best SEBI registered stock brokers in {cityName}? 
+            This page lists verified brokers that have their registered office or major presence in {cityName}.
+          </p>
+          <p>
+            We have organised the brokers so you can quickly compare discount and full-service options. 
+            Always verify the latest SEBI registration status on the official SEBI website before opening a demat account.
+          </p>
+        </div>
       </div>
 
       {/* Stats */}
@@ -89,12 +98,33 @@ export default async function BestBrokersInCityPage({
         </p>
       </div>
 
-      {/* Broker List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-        {sortedBrokers.map((broker) => (
-          <BrokerCard key={broker.id} broker={broker} />
-        ))}
-      </div>
+      {/* Top Brokers */}
+      {topBrokers.length > 0 && (
+        <section className="mb-14">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Top Brokers in {cityName}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {topBrokers.map((broker) => (
+              <BrokerCard key={broker.id} broker={broker} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* All Brokers */}
+      {remainingBrokers.length > 0 && (
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            All SEBI Registered Brokers in {cityName}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {remainingBrokers.map((broker) => (
+              <BrokerCard key={broker.id} broker={broker} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* FAQ Section */}
       <section className="border-t border-gray-200 pt-14">
@@ -108,7 +138,8 @@ export default async function BestBrokersInCityPage({
               How many SEBI registered stock brokers are there in {cityName}?
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              There are currently {cityBrokers.length} SEBI registered stock brokers listed in {cityName} on NiveshCheck.
+              There are currently {cityBrokers.length} SEBI registered stock brokers listed in {cityName} on NiveshCheck. 
+              The actual number can change as SEBI updates its records.
             </p>
           </div>
 
@@ -117,24 +148,76 @@ export default async function BestBrokersInCityPage({
               Which is the best stock broker in {cityName}?
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              The best broker depends on your needs (discount vs full-service, trading frequency, research support, etc.). 
-              Always compare brokerage charges, platform quality, and customer service before opening an account.
+              There is no single “best” broker for everyone. The right choice depends on whether you prefer a discount broker (low charges) 
+              or a full-service broker (research and advisory). Compare platform quality, brokerage, and customer support before deciding.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
-              How can I verify if a broker in {cityName} is SEBI registered?
+              Are all brokers listed here based in {cityName}?
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              You can check the SEBI registration number on this website and then confirm the latest status on the official SEBI website (www.sebi.gov.in).
+              The brokers shown have their registered address or primary presence recorded as {cityName} in publicly available data. 
+              Many brokers operate nationwide even if their registered office is in another city.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-lg text-gray-900 mb-2">
+              How can I verify a broker’s SEBI registration?
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Note the SEBI registration number shown on this site, then confirm the latest status on the official SEBI website (www.sebi.gov.in). 
+              NiveshCheck organises public data but does not independently verify brokers.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-lg text-gray-900 mb-2">
+              Should I choose a local broker in {cityName}?
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              A local presence can sometimes help with support, but most modern brokers offer fully online account opening and service. 
+              Focus more on charges, platform, and reliability than just the city of registration.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Related Links */}
+      <section className="mt-14 pt-10 border-t border-gray-200">
+        <h2 className="text-xl font-bold text-gray-900 mb-5">Related Pages</h2>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/discount-stock-brokers"
+            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
+          >
+            Discount Brokers
+          </Link>
+          <Link
+            href="/full-service-stock-brokers"
+            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
+          >
+            Full-Service Brokers
+          </Link>
+          <Link
+            href="/best-stock-brokers-for-beginners"
+            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
+          >
+            Best for Beginners
+          </Link>
+          <Link
+            href="/faq"
+            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
+          >
+            FAQ
+          </Link>
+        </div>
+      </section>
+
       {/* Back link */}
-      <div className="mt-14">
+      <div className="mt-12">
         <Link
           href={`/city/${city}`}
           className="text-blue-600 hover:underline font-medium"
