@@ -19,8 +19,8 @@ export default function HomePage() {
             Stock Brokers in India
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            NiveshCheck helps you discover and compare verified SEBI registered stock brokers. 
-            Find the right discount or full-service broker for your needs.
+            Browse recorded SEBI registration details for stock brokers in India and check
+            the current official record directly with SEBI.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -30,10 +30,10 @@ export default function HomePage() {
               Explore All Brokers
             </Link>
             <Link
-              href="/best-stock-brokers-for-beginners"
+              href="/faq"
               className="inline-block bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 px-8 py-3.5 rounded-xl font-medium transition"
             >
-              Best for Beginners
+              How to check a broker
             </Link>
           </div>
         </div>
@@ -77,10 +77,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Popular Brokers */}
+      {/* Broker directory preview */}
       <section className="max-w-6xl mx-auto px-4 py-10">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Popular Stock Brokers</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Broker directory</h2>
           <Link href="/brokers" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
             View all →
           </Link>

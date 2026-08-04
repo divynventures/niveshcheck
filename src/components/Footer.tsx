@@ -34,11 +34,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/best-stock-brokers-for-beginners" className="hover:text-white transition">
-                  Best for Beginners
-                </Link>
-              </li>
-              <li>
                 <Link href="/faq" className="hover:text-white transition">
                   FAQ
                 </Link>

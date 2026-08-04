@@ -41,16 +41,27 @@ export default async function BrokerDetailPage({
 
   if (!broker) notFound();
 
-  const sebiSearchUrl =
-    broker.registrationSourceUrl ?? getSebiBrokerSearchUrl(broker.sebiRegNo);
-  const registrationReviewedAt = broker.registrationReviewedAt
-    ? new Intl.DateTimeFormat("en-IN", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        timeZone: "UTC",
-      }).format(new Date(`${broker.registrationReviewedAt}T00:00:00Z`))
-    : null;
+  const sebiSearchUrl = broker.registrationSourceUrl ?? getSebiBrokerSearchUrl(broker.sebiRegNo);
+  const registrationReviewedAt = new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${broker.registrationReviewedAt}T00:00:00Z`));
+  const faqItems = [
+    {
+      question: `What is ${broker.tradeName}'s recorded SEBI registration number?`,
+      answer: `${broker.tradeName}'s recorded SEBI registration number on NiveshCheck is ${broker.sebiRegNo}. Check the current record directly with SEBI before relying on it.`,
+    },
+    {
+      question: `How can I check ${broker.tradeName}'s current SEBI record?`,
+      answer: `Use the official SEBI registered stock-broker directory and search for ${broker.sebiRegNo}. The official record may change after NiveshCheck's review date.`,
+    },
+    {
+      question: `Does NiveshCheck recommend ${broker.tradeName}?`,
+      answer: "No. NiveshCheck is an independent directory and does not recommend, endorse, certify, or assess the suitability of brokers.",
+    },
+  ];
 
   const schema = {
     "@context": "https://schema.org",
@@ -79,11 +90,21 @@ export default async function BrokerDetailPage({
       },
     ],
   };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <JsonLd data={breadcrumbSchema} />
-      {broker.registrationReviewedAt && <JsonLd data={schema} />}
+      <JsonLd data={schema} />
+      <JsonLd data={faqSchema} />
 
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">
@@ -107,19 +128,13 @@ export default async function BrokerDetailPage({
             </h1>
             <p className="text-gray-500">{broker.name}</p>
           </div>
-          <span
-            className={`inline-block text-sm font-medium px-3 py-1.5 rounded-full ${
-              broker.type === "Discount"
-                ? "bg-green-50 text-green-700"
-                : "bg-blue-50 text-blue-700"
-            }`}
-          >
-            {broker.type} Broker
-          </span>
         </div>
 
         <p className="text-gray-700 leading-relaxed text-lg">
-          {broker.description}
+          NiveshCheck records this entry against SEBI registration number{" "}
+          <span className="font-semibold text-gray-900">{broker.sebiRegNo}</span>. The
+          record was reviewed on {registrationReviewedAt}; confirm the current details
+          directly with SEBI.
         </p>
       </div>
 
@@ -136,24 +151,31 @@ export default async function BrokerDetailPage({
                 {broker.sebiRegNo}
               </dd>
             </div>
-            {registrationReviewedAt && (
-              <div>
-                <dt className="text-gray-500 mb-1">Registration record reviewed</dt>
-                <dd className="font-semibold text-gray-900">{registrationReviewedAt}</dd>
-              </div>
-            )}
             <div>
-              <dt className="text-gray-500 mb-1">Type</dt>
-              <dd className="font-semibold text-gray-900">{broker.type}</dd>
+              <dt className="text-gray-500 mb-1">Record reviewed</dt>
+              <dd className="font-semibold text-gray-900">{registrationReviewedAt}</dd>
+            </div>
+            <div>
+              <dt className="text-gray-500 mb-1">Official source</dt>
+              <dd>
+                <a
+                  href={sebiSearchUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-blue-600 hover:underline"
+                >
+                  SEBI registered stock-broker directory
+                </a>
+              </dd>
             </div>
           </dl>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-6">
-          <h2 className="font-bold text-lg text-gray-900 mb-5">Location</h2>
+          <h2 className="font-bold text-lg text-gray-900 mb-5">Recorded address</h2>
           <dl className="space-y-4 text-sm">
             <div>
-              <dt className="text-gray-500 mb-1">Address</dt>
+              <dt className="text-gray-500 mb-1">Address in the source record</dt>
               <dd className="font-medium text-gray-900 leading-relaxed">
                 {broker.address}
               </dd>
@@ -192,21 +214,11 @@ export default async function BrokerDetailPage({
         </a>
       </section>
 
-      {/* Segments */}
+      {/* Equity exchange memberships */}
       <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-10">
         <h2 className="font-bold text-lg text-gray-900 mb-5">
-          Trading Segments & Exchanges
+          Recorded equity exchange memberships
         </h2>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {broker.segments.map((seg) => (
-            <span
-              key={seg}
-              className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
-            >
-              {seg}
-            </span>
-          ))}
-        </div>
         <div className="flex flex-wrap gap-2">
           {broker.exchanges.map((ex) => (
             <span
@@ -217,21 +229,27 @@ export default async function BrokerDetailPage({
             </span>
           ))}
         </div>
+        <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+          These memberships are recorded from NiveshCheck&apos;s documented SEBI equity-source
+          material. They do not establish membership in other market segments.
+        </p>
       </div>
 
-      {/* CTA */}
-      {broker.website && (
-        <div className="text-center">
-          <a
-            href={broker.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-medium transition shadow-sm text-lg"
-          >
-            Visit Official Website →
-          </a>
+      <section className="border-t border-gray-200 pt-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-8">Frequently asked questions</h2>
+        <div className="space-y-7">
+          {faqItems.map((item) => (
+            <div key={item.question}>
+              <h3 className="font-semibold text-lg text-gray-900 mb-2">{item.question}</h3>
+              <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+            </div>
+          ))}
         </div>
-      )}
+        <p className="mt-8 text-sm text-gray-600">
+          See a factual error? <Link href="/contact" className="text-blue-600 hover:underline">Suggest a correction</Link> or read our{" "}
+          <Link href="/methodology" className="text-blue-600 hover:underline">methodology</Link>.
+        </p>
+      </section>
     </div>
   );
 }

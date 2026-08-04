@@ -120,12 +120,6 @@ export default function FullServiceBrokersPage() {
             Discount Brokers
           </Link>
           <Link
-            href="/best-stock-brokers-for-beginners"
-            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
-          >
-            Best for Beginners
-          </Link>
-          <Link
             href="/faq"
             className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
           >
