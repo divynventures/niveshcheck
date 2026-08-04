@@ -3,9 +3,12 @@ import brokersData from "@/data/brokers.json";
 import { Broker } from "@/lib/types";
 
 const brokers = brokersData as Broker[];
+const minimumIndexableCityListings = 5;
 
 export async function generateStaticParams() {
-  const cities = Array.from(new Set(brokers.map((broker) => broker.city)));
+  const cities = Array.from(new Set(brokers.map((broker) => broker.city))).filter(
+    (city) => brokers.filter((broker) => broker.city === city).length >= minimumIndexableCityListings
+  );
 
   return cities.map((city) => ({
     city: city.toLowerCase().replace(/\s+/g, "-"),
@@ -19,11 +22,11 @@ export default async function LegacyBestBrokersInCityPage({
   params: Promise<{ city: string }>;
 }) {
   const { city } = await params;
-  const cityExists = brokers.some(
+  const cityBrokerCount = brokers.filter(
     (broker) => broker.city.toLowerCase().replace(/\s+/g, "-") === city
-  );
+  ).length;
 
-  if (!cityExists) notFound();
+  if (cityBrokerCount === 0) notFound();
 
-  permanentRedirect(`/city/${city}`);
+  permanentRedirect(cityBrokerCount >= minimumIndexableCityListings ? `/city/${city}` : "/brokers");
 }

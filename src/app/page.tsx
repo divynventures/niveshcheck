@@ -8,6 +8,7 @@ const brokers = brokersData as Broker[];
 export default function HomePage() {
   const topBrokers = brokers.slice(0, 6);
   const cities = Array.from(new Set(brokers.map((b) => b.city))).sort();
+  const mumbaiBrokerCount = brokers.filter((broker) => broker.city === "Mumbai").length;
 
   return (
     <div>
@@ -51,28 +52,28 @@ export default function HomePage() {
             <div className="text-sm text-gray-500 mt-1">Complete directory</div>
           </Link>
           <Link
-            href="/discount-stock-brokers"
+            href="/city/mumbai"
             className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-green-400 hover:shadow-md transition text-center"
           >
-            <div className="text-2xl font-bold text-green-600 mb-1">Low Cost</div>
-            <div className="font-semibold text-gray-900">Discount Brokers</div>
-            <div className="text-sm text-gray-500 mt-1">Flat & zero brokerage</div>
+            <div className="text-2xl font-bold text-green-600 mb-1">{mumbaiBrokerCount}</div>
+            <div className="font-semibold text-gray-900">Mumbai Records</div>
+            <div className="text-sm text-gray-500 mt-1">Recorded addresses</div>
           </Link>
           <Link
-            href="/full-service-stock-brokers"
+            href="/methodology"
             className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-400 hover:shadow-md transition text-center"
           >
-            <div className="text-2xl font-bold text-blue-600 mb-1">Research</div>
-            <div className="font-semibold text-gray-900">Full-Service</div>
-            <div className="text-sm text-gray-500 mt-1">Advisory & support</div>
+            <div className="text-2xl font-bold text-blue-600 mb-1">Sources</div>
+            <div className="font-semibold text-gray-900">Methodology</div>
+            <div className="text-sm text-gray-500 mt-1">How records are reviewed</div>
           </Link>
           <Link
-            href="/fno-brokers"
+            href="/faq"
             className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-purple-400 hover:shadow-md transition text-center"
           >
-            <div className="text-2xl font-bold text-purple-600 mb-1">F&amp;O</div>
-            <div className="font-semibold text-gray-900">F&amp;O Brokers</div>
-            <div className="text-sm text-gray-500 mt-1">Derivatives segment</div>
+            <div className="text-2xl font-bold text-purple-600 mb-1">Check</div>
+            <div className="font-semibold text-gray-900">Broker FAQ</div>
+            <div className="text-sm text-gray-500 mt-1">How to verify a record</div>
           </Link>
         </div>
       </section>

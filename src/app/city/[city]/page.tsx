@@ -7,9 +7,18 @@ import { Broker } from "@/lib/types";
 import BrokerCard from "@/components/BrokerCard";
 
 const brokers = brokersData as Broker[];
+const minimumIndexableCityListings = 5;
+
+function getCityBrokers(city: string) {
+  return brokers.filter(
+    (broker) => broker.city.toLowerCase().replace(/\s+/g, "-") === city
+  );
+}
 
 export async function generateStaticParams() {
-  const cities = Array.from(new Set(brokers.map((b) => b.city)));
+  const cities = Array.from(new Set(brokers.map((b) => b.city))).filter(
+    (city) => getCityBrokers(city.toLowerCase().replace(/\s+/g, "-")).length >= minimumIndexableCityListings
+  );
   return cities.map((city) => ({
     city: city.toLowerCase().replace(/\s+/g, "-"),
   }));
@@ -21,16 +30,21 @@ export async function generateMetadata({
   params: Promise<{ city: string }>;
 }) {
   const { city } = await params;
-  const cityName = city
+  const cityBrokers = getCityBrokers(city);
+  const cityName = cityBrokers[0]?.city ?? city
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 
-  return createPageMetadata({
+  const metadata = createPageMetadata({
     title: `Stock Brokers in ${cityName}`,
-    description: `List of stock brokers with a registered address or primary presence in ${cityName}. Check the recorded SEBI registration details before opening an account.`,
+    description: `Browse NiveshCheck records with an address in ${cityName}. Each profile shows the recorded SEBI registration number and a link to check the current official record.`,
     pathname: `/city/${city}`,
   });
+
+  return cityBrokers.length >= minimumIndexableCityListings
+    ? metadata
+    : { ...metadata, robots: { index: false, follow: true } };
 }
 
 export default async function CityPage({
@@ -39,14 +53,11 @@ export default async function CityPage({
   params: Promise<{ city: string }>;
 }) {
   const { city } = await params;
-  const cityName = city
+  const cityBrokers = getCityBrokers(city);
+  const cityName = cityBrokers[0]?.city ?? city
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
-
-  const cityBrokers = brokers.filter(
-    (b) => b.city.toLowerCase().replace(/\s+/g, "-") === city
-  );
 
   if (cityBrokers.length === 0) notFound();
 
@@ -87,11 +98,12 @@ export default async function CityPage({
 
         <div className="prose prose-gray max-w-3xl text-gray-600 leading-relaxed space-y-4">
           <p>
-            This page lists SEBI registered stock brokers that have their registered office or primary presence in {cityName}. 
-            You can compare both discount and full-service brokers.
+            This page lists NiveshCheck records whose recorded address is in {cityName}.
+            Open any profile to see its recorded SEBI registration number, source link, and review date.
           </p>
           <p>
-            Always verify the latest SEBI registration status on the official SEBI website before opening a demat account.
+            NiveshCheck is an independent directory and does not determine a broker&apos;s current
+            status, suitability, or ranking. Confirm the latest record directly with SEBI.
           </p>
         </div>
       </div>
@@ -100,7 +112,7 @@ export default async function CityPage({
       <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-12">
         <p className="text-gray-700 text-lg">
           <span className="font-bold text-blue-700 text-xl">{cityBrokers.length}</span>{" "}
-          brokers found in {cityName}
+          source-backed broker records in {cityName}
         </p>
       </div>
 
@@ -120,20 +132,22 @@ export default async function CityPage({
         <div className="space-y-8">
           <div>
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
-              How many SEBI registered brokers are there in {cityName}?
+              How many broker records does NiveshCheck list for {cityName}?
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              There are currently {cityBrokers.length} SEBI registered stock brokers listed in {cityName} on NiveshCheck.
+              NiveshCheck currently lists {cityBrokers.length} source-backed broker records with
+              a recorded address in {cityName}. This is a directory count, not a count of all
+              brokers operating in the city.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold text-lg text-gray-900 mb-2">
-              Can I open an account with a broker based in another city?
+              What does the city shown on this page mean?
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Yes. Most modern brokers allow fully online account opening from anywhere in India. 
-              The city of registration is less important than the broker’s platform, charges, and service quality.
+              It is the city recorded from the source address used for the listing. It does not
+              establish a broker&apos;s service area, branch network, or current operating location.
             </p>
           </div>
 
@@ -142,8 +156,9 @@ export default async function CityPage({
               How do I verify a broker’s registration?
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Note the SEBI registration number and confirm the latest status on the official SEBI website (www.sebi.gov.in). 
-              NiveshCheck organises public data but does not independently verify brokers.
+              Note the registration number on the broker&apos;s profile and use its official SEBI link
+              to check the current record. NiveshCheck organises public information and does not
+              independently certify or recommend brokers.
             </p>
           </div>
         </div>
@@ -153,17 +168,11 @@ export default async function CityPage({
       <section className="mt-14 pt-10 border-t border-gray-200">
         <h2 className="text-xl font-bold text-gray-900 mb-5">Related Pages</h2>
         <div className="flex flex-wrap gap-3">
-          <Link
-            href="/discount-stock-brokers"
-            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
-          >
-            Discount Brokers
+          <Link href="/brokers" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition">
+            All Broker Records
           </Link>
-          <Link
-            href="/full-service-stock-brokers"
-            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
-          >
-            Full-Service Brokers
+          <Link href="/methodology" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition">
+            Methodology
           </Link>
           <Link
             href="/faq"

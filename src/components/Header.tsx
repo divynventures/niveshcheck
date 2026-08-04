@@ -26,11 +26,8 @@ export default function Header() {
           <Link href="/brokers" className="hover:text-blue-600 transition">
             All Brokers
           </Link>
-          <Link href="/discount-stock-brokers" className="hover:text-blue-600 transition">
-            Discount
-          </Link>
-          <Link href="/full-service-stock-brokers" className="hover:text-blue-600 transition">
-            Full-Service
+          <Link href="/methodology" className="hover:text-blue-600 transition">
+            Methodology
           </Link>
           <Link href="/faq" className="hover:text-blue-600 transition">
             FAQ
@@ -62,14 +59,8 @@ export default function Header() {
             <Link href="/brokers" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
               All Brokers
             </Link>
-            <Link href="/discount-stock-brokers" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
-              Discount Brokers
-            </Link>
-            <Link href="/full-service-stock-brokers" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
-              Full-Service Brokers
-            </Link>
-            <Link href="/fno-brokers" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
-              F&O Brokers
+            <Link href="/methodology" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
+              Methodology
             </Link>
             <Link href="/faq" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
               FAQ

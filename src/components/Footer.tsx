@@ -24,13 +24,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/discount-stock-brokers" className="hover:text-white transition">
-                  Discount Brokers
-                </Link>
-              </li>
-              <li>
-                <Link href="/full-service-stock-brokers" className="hover:text-white transition">
-                  Full-Service Brokers
+                <Link href="/methodology" className="hover:text-white transition">
+                  Methodology
                 </Link>
               </li>
               <li>

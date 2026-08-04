@@ -4,6 +4,7 @@ import { Broker } from "@/lib/types";
 
 const brokers = brokersData as Broker[];
 const baseUrl = "https://www.niveshcheck.in";
+const minimumIndexableCityListings = 5;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
@@ -19,24 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/discount-stock-brokers`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/full-service-stock-brokers`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/fno-brokers`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.7,
     },
     {
       url: `${baseUrl}/faq`,
@@ -83,7 +66,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // City pages
-  const cities = Array.from(new Set(brokers.map((b) => b.city)));
+  const cities = Array.from(new Set(brokers.map((b) => b.city))).filter(
+    (city) => brokers.filter((broker) => broker.city === city).length >= minimumIndexableCityListings
+  );
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => {
     const slug = city.toLowerCase().replace(/\s+/g, "-");
     return {
