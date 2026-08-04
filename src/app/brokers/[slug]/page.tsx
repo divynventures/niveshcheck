@@ -214,6 +214,24 @@ export default async function BrokerDetailPage({
         </a>
       </section>
 
+      {broker.website && (
+        <section className="bg-white border border-gray-200 rounded-2xl p-6 mb-10">
+          <h2 className="font-bold text-lg text-gray-900 mb-3">Broker website</h2>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            This external link is provided for convenience. NiveshCheck does not receive
+            a commission from it and does not recommend or endorse this broker.
+          </p>
+          <a
+            href={broker.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-blue-600 font-medium hover:underline"
+          >
+            Open broker website →
+          </a>
+        </section>
+      )}
+
       {/* Equity exchange memberships */}
       <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-10">
         <h2 className="font-bold text-lg text-gray-900 mb-5">

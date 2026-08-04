@@ -21,6 +21,7 @@ Each record must have all of the following:
 - Active-client counts, ratings, rankings, brokerage charges, platform features, and promotional descriptions are not added or updated without a dated, attributable source and a separate review rule.
 - Equity-source data must not be used to claim F&O, currency, commodity, or other segment membership.
 - Addresses and exchange memberships are changed only after record-level reconciliation; do not bulk overwrite them from a source snapshot.
+- An external broker website link may be provided as a convenience link only. It must not be presented as a recommendation or account-opening call to action; any commercial relationship must be disclosed before publication.
 
 ## Batch quality gate
 
