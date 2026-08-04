@@ -3,8 +3,8 @@ export interface Broker {
   name: string;
   tradeName: string;
   sebiRegNo: string;
-  registrationSourceUrl?: string;
-  registrationReviewedAt?: string;
+  registrationSourceUrl: string;
+  registrationReviewedAt: string;
   slug: string;
   address: string;
   city: string;
