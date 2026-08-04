@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import brokersData from "@/data/brokers.json";
+import { formatBrokerName } from "@/lib/format-broker-name";
 import { absoluteUrl, createPageMetadata } from "@/lib/metadata";
 import { getSebiBrokerSearchUrl } from "@/lib/sebi";
 import { Broker } from "@/lib/types";
@@ -24,9 +25,11 @@ export async function generateMetadata({
 
   if (!broker) return { title: "Broker Not Found" };
 
+  const brokerName = formatBrokerName(broker.tradeName);
+
   return createPageMetadata({
-    title: `${broker.tradeName} SEBI Registration Details`,
-    description: `View NiveshCheck's recorded SEBI registration number for ${broker.tradeName} (${broker.sebiRegNo}), based in ${broker.city}, and verify the current record directly with SEBI.`,
+    title: `${brokerName} SEBI Registration Details`,
+    description: `View NiveshCheck's recorded SEBI registration number for ${brokerName} (${broker.sebiRegNo}), based in ${broker.city}, and verify the current record directly with SEBI.`,
     pathname: `/brokers/${broker.slug}`,
   });
 }
@@ -41,6 +44,8 @@ export default async function BrokerDetailPage({
 
   if (!broker) notFound();
 
+  const brokerName = formatBrokerName(broker.tradeName);
+  const legalName = formatBrokerName(broker.name);
   const sebiSearchUrl = broker.registrationSourceUrl ?? getSebiBrokerSearchUrl(broker.sebiRegNo);
   const registrationReviewedAt = new Intl.DateTimeFormat("en-IN", {
     day: "numeric",
@@ -50,15 +55,15 @@ export default async function BrokerDetailPage({
   }).format(new Date(`${broker.registrationReviewedAt}T00:00:00Z`));
   const faqItems = [
     {
-      question: `What is ${broker.tradeName}'s recorded SEBI registration number?`,
-      answer: `${broker.tradeName}'s recorded SEBI registration number on NiveshCheck is ${broker.sebiRegNo}. Check the current record directly with SEBI before relying on it.`,
+      question: `What is ${brokerName}'s recorded SEBI registration number?`,
+      answer: `${brokerName}'s recorded SEBI registration number on NiveshCheck is ${broker.sebiRegNo}. Check the current record directly with SEBI before relying on it.`,
     },
     {
-      question: `How can I check ${broker.tradeName}'s current SEBI record?`,
+      question: `How can I check ${brokerName}'s current SEBI record?`,
       answer: `Use the official SEBI registered stock-broker directory and search for ${broker.sebiRegNo}. The official record may change after NiveshCheck's review date.`,
     },
     {
-      question: `Does NiveshCheck recommend ${broker.tradeName}?`,
+      question: `Does NiveshCheck recommend ${brokerName}?`,
       answer: "No. NiveshCheck is an independent directory and does not recommend, endorse, certify, or assess the suitability of brokers.",
     },
   ];
@@ -66,8 +71,8 @@ export default async function BrokerDetailPage({
   const schema = {
     "@context": "https://schema.org",
     "@type": "FinancialService",
-    name: broker.tradeName,
-    legalName: broker.name,
+    name: brokerName,
+    legalName,
     url: absoluteUrl(`/brokers/${broker.slug}`),
     sameAs: sebiSearchUrl,
     identifier: {
@@ -85,7 +90,7 @@ export default async function BrokerDetailPage({
       {
         "@type": "ListItem",
         position: 3,
-        name: broker.tradeName,
+        name: brokerName,
         item: absoluteUrl(`/brokers/${broker.slug}`),
       },
     ],
@@ -116,7 +121,7 @@ export default async function BrokerDetailPage({
           Brokers
         </Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-800">{broker.tradeName}</span>
+        <span className="text-gray-800">{brokerName}</span>
       </nav>
 
       {/* Main Card */}
@@ -124,9 +129,9 @@ export default async function BrokerDetailPage({
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
           <div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-              {broker.tradeName}
+              {brokerName}
             </h1>
-            <p className="text-gray-500">{broker.name}</p>
+            <p className="text-gray-500">{legalName}</p>
           </div>
         </div>
 

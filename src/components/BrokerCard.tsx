@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatBrokerName } from "@/lib/format-broker-name";
 import { Broker } from "@/lib/types";
 
 export default function BrokerCard({ broker }: { broker: Broker }) {
@@ -10,9 +11,9 @@ export default function BrokerCard({ broker }: { broker: Broker }) {
       <div className="mb-4">
         <div>
           <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition">
-            {broker.tradeName}
+            {formatBrokerName(broker.tradeName)}
           </h3>
-          <p className="text-sm text-gray-500 mt-0.5">{broker.name}</p>
+          <p className="text-sm text-gray-500 mt-0.5">{formatBrokerName(broker.name)}</p>
         </div>
       </div>
 
