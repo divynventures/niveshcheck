@@ -1,15 +1,17 @@
 import Link from "next/link";
 import brokersData from "@/data/brokers.json";
+import { createPageMetadata } from "@/lib/metadata";
 import { Broker } from "@/lib/types";
 import BrokerCard from "@/components/BrokerCard";
 
 const brokers = brokersData as Broker[];
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Best Stock Brokers for Beginners in India (2026)",
   description:
     "Best SEBI registered stock brokers for beginners in India. Simple platforms, low charges and easy account opening.",
-};
+  pathname: "/best-stock-brokers-for-beginners",
+});
 
 export default function BestBrokersForBeginnersPage() {
   const beginnerFriendlyIds = [
@@ -155,12 +157,6 @@ export default function BestBrokersForBeginnersPage() {
             className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
           >
             Full-Service Brokers
-          </Link>
-          <Link
-            href="/top-stock-brokers-by-clients"
-            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
-          >
-            Top by Clients
           </Link>
           <Link
             href="/faq"

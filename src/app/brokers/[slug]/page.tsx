@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import brokersData from "@/data/brokers.json";
+import { absoluteUrl, createPageMetadata } from "@/lib/metadata";
+import { getSebiBrokerSearchUrl } from "@/lib/sebi";
 import { Broker } from "@/lib/types";
 
 const brokers = brokersData as Broker[];
@@ -21,10 +24,11 @@ export async function generateMetadata({
 
   if (!broker) return { title: "Broker Not Found" };
 
-  return {
-    title: `${broker.tradeName} - SEBI Registered Stock Broker`,
-    description: `${broker.tradeName} (${broker.sebiRegNo}) is a SEBI registered stock broker based in ${broker.city}. ${broker.description}`,
-  };
+  return createPageMetadata({
+    title: `${broker.tradeName} SEBI Registration Details`,
+    description: `View NiveshCheck's recorded SEBI registration number for ${broker.tradeName} (${broker.sebiRegNo}), based in ${broker.city}, and verify the current record directly with SEBI.`,
+    pathname: `/brokers/${broker.slug}`,
+  });
 }
 
 export default async function BrokerDetailPage({
@@ -37,33 +41,49 @@ export default async function BrokerDetailPage({
 
   if (!broker) notFound();
 
+  const sebiSearchUrl =
+    broker.registrationSourceUrl ?? getSebiBrokerSearchUrl(broker.sebiRegNo);
+  const registrationReviewedAt = broker.registrationReviewedAt
+    ? new Intl.DateTimeFormat("en-IN", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC",
+      }).format(new Date(`${broker.registrationReviewedAt}T00:00:00Z`))
+    : null;
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "FinancialService",
     name: broker.tradeName,
     legalName: broker.name,
-    description: broker.description,
-    url: broker.website,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: broker.address,
-      addressLocality: broker.city,
-      addressRegion: broker.state,
-      addressCountry: "IN",
-    },
+    url: absoluteUrl(`/brokers/${broker.slug}`),
+    sameAs: sebiSearchUrl,
     identifier: {
       "@type": "PropertyValue",
       name: "SEBI Registration Number",
       value: broker.sebiRegNo,
     },
   };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Brokers", item: absoluteUrl("/brokers") },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: broker.tradeName,
+        item: absoluteUrl(`/brokers/${broker.slug}`),
+      },
+    ],
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      <JsonLd data={breadcrumbSchema} />
+      {broker.registrationReviewedAt && <JsonLd data={schema} />}
 
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">
@@ -116,12 +136,10 @@ export default async function BrokerDetailPage({
                 {broker.sebiRegNo}
               </dd>
             </div>
-            {broker.activeClients && (
+            {registrationReviewedAt && (
               <div>
-                <dt className="text-gray-500 mb-1">Active Clients</dt>
-                <dd className="font-semibold text-green-600">
-                  {broker.activeClients}
-                </dd>
+                <dt className="text-gray-500 mb-1">Registration record reviewed</dt>
+                <dd className="font-semibold text-gray-900">{registrationReviewedAt}</dd>
               </div>
             )}
             <div>
@@ -156,6 +174,23 @@ export default async function BrokerDetailPage({
           </dl>
         </div>
       </div>
+
+      <section className="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-10">
+        <h2 className="font-bold text-lg text-gray-900 mb-3">
+          Verify the current registration details
+        </h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          NiveshCheck records the SEBI registration number above from publicly available information. Registration status can change, so check the current record directly in SEBI&apos;s registered stock-broker directory before opening an account or making a decision.
+        </p>
+        <a
+          href={sebiSearchUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
+        >
+          Search {broker.sebiRegNo} on SEBI →
+        </a>
+      </section>
 
       {/* Segments */}
       <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-10">

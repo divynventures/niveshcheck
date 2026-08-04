@@ -1,15 +1,17 @@
 import Link from "next/link";
 import brokersData from "@/data/brokers.json";
+import { createPageMetadata } from "@/lib/metadata";
 import { Broker } from "@/lib/types";
 import BrokerCard from "@/components/BrokerCard";
 
 const brokers = brokersData as Broker[];
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Best Discount Stock Brokers in India (2026)",
   description:
     "List of SEBI registered discount stock brokers in India. Compare low-cost brokers with flat or zero brokerage charges.",
-};
+  pathname: "/discount-stock-brokers",
+});
 
 export default function DiscountBrokersPage() {
   const discountBrokers = brokers.filter((b) => b.type === "Discount");
@@ -122,12 +124,6 @@ export default function DiscountBrokersPage() {
             className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
           >
             Best for Beginners
-          </Link>
-          <Link
-            href="/top-stock-brokers-by-clients"
-            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
-          >
-            Top by Clients
           </Link>
           <Link
             href="/faq"

@@ -67,12 +67,12 @@ export default function HomePage() {
             <div className="text-sm text-gray-500 mt-1">Advisory & support</div>
           </Link>
           <Link
-            href="/top-stock-brokers-by-clients"
-            className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-indigo-400 hover:shadow-md transition text-center"
+            href="/fno-brokers"
+            className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-purple-400 hover:shadow-md transition text-center"
           >
-            <div className="text-2xl font-bold text-indigo-600 mb-1">Popular</div>
-            <div className="font-semibold text-gray-900">Top by Clients</div>
-            <div className="text-sm text-gray-500 mt-1">Largest brokers</div>
+            <div className="text-2xl font-bold text-purple-600 mb-1">F&amp;O</div>
+            <div className="font-semibold text-gray-900">F&amp;O Brokers</div>
+            <div className="text-sm text-gray-500 mt-1">Derivatives segment</div>
           </Link>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function HomePage() {
           {cities.map((city) => (
             <Link
               key={city}
-              href={`/best/${city.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/city/${city.toLowerCase().replace(/\s+/g, "-")}`}
               className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-blue-500 hover:text-blue-600 transition"
             >
               {city}

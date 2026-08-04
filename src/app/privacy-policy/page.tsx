@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Privacy Policy",
-  description: "Privacy Policy for SEBI Brokers Directory",
-};
+  description: "Privacy Policy for NiveshCheck.",
+  pathname: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

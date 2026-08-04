@@ -6,6 +6,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "NiveshCheck Editorial Team",
+  url: "https://niveshcheck.in",
+  email: "hello@niveshcheck.in",
+  description:
+    "An independent directory that organizes publicly available information about stock brokers in India.",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.niveshcheck.in"),
@@ -15,6 +24,9 @@ export const metadata: Metadata = {
   },
   description:
     "Check and compare SEBI registered stock brokers in India. Find discount and full-service brokers, best brokers by city, and more on NiveshCheck.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "NiveshCheck – SEBI Registered Stock Brokers in India",
     description:
@@ -43,6 +55,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 text-gray-900`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c"),
+          }}
+        />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-3XHH4N1HP4"

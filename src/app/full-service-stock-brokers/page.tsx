@@ -1,15 +1,17 @@
 import Link from "next/link";
 import brokersData from "@/data/brokers.json";
+import { createPageMetadata } from "@/lib/metadata";
 import { Broker } from "@/lib/types";
 import BrokerCard from "@/components/BrokerCard";
 
 const brokers = brokersData as Broker[];
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Best Full-Service Stock Brokers in India (2026)",
   description:
     "List of SEBI registered full-service stock brokers in India. Compare brokers that offer research, advisory and relationship managers.",
-};
+  pathname: "/full-service-stock-brokers",
+});
 
 export default function FullServiceBrokersPage() {
   const fullServiceBrokers = brokers.filter((b) => b.type === "Full-service");
@@ -122,12 +124,6 @@ export default function FullServiceBrokersPage() {
             className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
           >
             Best for Beginners
-          </Link>
-          <Link
-            href="/top-stock-brokers-by-clients"
-            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
-          >
-            Top by Clients
           </Link>
           <Link
             href="/faq"

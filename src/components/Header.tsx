@@ -74,9 +74,6 @@ export default function Header() {
             <Link href="/best-stock-brokers-for-beginners" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
               Best for Beginners
             </Link>
-            <Link href="/top-stock-brokers-by-clients" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
-              Top by Clients
-            </Link>
             <Link href="/fno-brokers" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
               F&O Brokers
             </Link>

@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
-  title: "Data Methodology | NiveshCheck",
+export const metadata = createPageMetadata({
+  title: "Data Methodology",
   description:
     "How NiveshCheck sources and organises information about SEBI registered stock brokers in India.",
-};
+  pathname: "/methodology",
+});
 
 export default function MethodologyPage() {
   return (
@@ -57,15 +59,20 @@ export default function MethodologyPage() {
         </ul>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-3">
-          Updates
+          Corrections and updates
         </h2>
         <p>
-          We periodically review and update the directory. However, the official SEBI website 
-          remains the authoritative source for the latest registration status of any broker.
+          We periodically review and update the directory. The official SEBI website remains the authoritative source for the latest registration status of any broker.
         </p>
-
-        <p className="pt-4">
-          If you notice any incorrect or outdated information, please contact us so we can review and correct it.
+        <p>
+          To report a possible factual error, email{" "}
+          <a href="mailto:hello@niveshcheck.in" className="text-blue-600 hover:underline">
+            hello@niveshcheck.in
+          </a>{" "}
+          with the relevant page URL and, where possible, an official supporting source. We review correction requests against publicly available official sources and update or remove information when an error is confirmed.
+        </p>
+        <p>
+          We may not make a change when the available evidence is incomplete, conflicting, or cannot be verified. NiveshCheck does not accept payment in exchange for changing factual listings, rankings, or editorial content.
         </p>
       </div>
 

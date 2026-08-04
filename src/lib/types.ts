@@ -3,6 +3,8 @@ export interface Broker {
   name: string;
   tradeName: string;
   sebiRegNo: string;
+  registrationSourceUrl?: string;
+  registrationReviewedAt?: string;
   slug: string;
   address: string;
   city: string;
@@ -12,7 +14,6 @@ export interface Broker {
   website?: string;
   segments: string[];
   exchanges: string[];
-  activeClients?: string;
   type: "Discount" | "Full-service" | "Bank";
   description: string;
 }

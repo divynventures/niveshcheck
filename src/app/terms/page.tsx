@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Terms of Use",
-  description: "Terms of Use for SEBI Brokers Directory",
-};
+  description: "Terms of Use for NiveshCheck.",
+  pathname: "/terms",
+});
 
 export default function TermsPage() {
   return (

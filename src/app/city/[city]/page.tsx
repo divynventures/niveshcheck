@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { JsonLd } from "@/components/JsonLd";
 import brokersData from "@/data/brokers.json";
+import { absoluteUrl, createPageMetadata } from "@/lib/metadata";
 import { Broker } from "@/lib/types";
 import BrokerCard from "@/components/BrokerCard";
 
@@ -24,10 +26,11 @@ export async function generateMetadata({
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
 
-  return {
-    title: `Stock Brokers in ${cityName} | SEBI Registered`,
-    description: `List of SEBI registered stock brokers in ${cityName}. Find discount and full-service brokers based in ${cityName}.`,
-  };
+  return createPageMetadata({
+    title: `Stock Brokers in ${cityName}`,
+    description: `List of stock brokers with a registered address or primary presence in ${cityName}. Check the recorded SEBI registration details before opening an account.`,
+    pathname: `/city/${city}`,
+  });
 }
 
 export default async function CityPage({
@@ -47,14 +50,26 @@ export default async function CityPage({
 
   if (cityBrokers.length === 0) notFound();
 
-  const sortedBrokers = [...cityBrokers].sort((a, b) => {
-    if (a.activeClients && !b.activeClients) return -1;
-    if (!a.activeClients && b.activeClients) return 1;
-    return 0;
-  });
+  const sortedBrokers = [...cityBrokers].sort((a, b) =>
+    a.tradeName.localeCompare(b.tradeName, "en")
+  );
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: `Stock Brokers in ${cityName}`,
+        item: absoluteUrl(`/city/${city}`),
+      },
+    ],
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
+      <JsonLd data={breadcrumbSchema} />
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">
         <Link href="/" className="hover:text-blue-600 transition">
@@ -81,18 +96,12 @@ export default async function CityPage({
         </div>
       </div>
 
-      {/* Stats + CTA */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-12">
+      {/* Stats */}
+      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-12">
         <p className="text-gray-700 text-lg">
           <span className="font-bold text-blue-700 text-xl">{cityBrokers.length}</span>{" "}
           brokers found in {cityName}
         </p>
-        <Link
-          href={`/best/${city}`}
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
-        >
-          View Best Brokers in {cityName} →
-        </Link>
       </div>
 
       {/* Broker List */}
@@ -144,12 +153,6 @@ export default async function CityPage({
       <section className="mt-14 pt-10 border-t border-gray-200">
         <h2 className="text-xl font-bold text-gray-900 mb-5">Related Pages</h2>
         <div className="flex flex-wrap gap-3">
-          <Link
-            href={`/best/${city}`}
-            className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"
-          >
-            Best Brokers in {cityName}
-          </Link>
           <Link
             href="/discount-stock-brokers"
             className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-blue-400 transition"

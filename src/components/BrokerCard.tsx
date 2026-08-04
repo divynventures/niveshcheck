@@ -30,12 +30,6 @@ export default function BrokerCard({ broker }: { broker: Broker }) {
           <span className="text-gray-500">City</span>
           <span className="font-medium text-gray-800">{broker.city}</span>
         </div>
-        {broker.activeClients && (
-          <div className="flex justify-between">
-            <span className="text-gray-500">Active Clients</span>
-            <span className="font-medium text-gray-800">{broker.activeClients}</span>
-          </div>
-        )}
         <div className="flex justify-between">
           <span className="text-gray-500">SEBI Reg.</span>
           <span className="font-medium text-gray-800 text-xs">{broker.sebiRegNo}</span>

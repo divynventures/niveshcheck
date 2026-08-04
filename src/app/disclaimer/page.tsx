@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Disclaimer",
-  description: "Disclaimer for SEBI Brokers Directory",
-};
+  description: "Important limitations and no-advice disclaimer for NiveshCheck.",
+  pathname: "/disclaimer",
+});
 
 export default function DisclaimerPage() {
   return (

@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "About NiveshCheck",
   description:
     "Learn about NiveshCheck — a directory of SEBI registered stock brokers in India. Our goal is to help users easily check and discover registered brokers.",
-};
+  pathname: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -23,13 +25,19 @@ export default function AboutPage() {
 
       <div className="prose prose-gray max-w-none text-gray-600 leading-relaxed space-y-6">
         <p>
-          NiveshCheck is a directory of SEBI registered stock brokers in India. 
-          Our goal is simple: make it easier for people to check and discover registered brokers before opening a demat account.
+          NiveshCheck is an independent directory of stock brokers in India. Our goal is simple: make it easier for people to check and discover publicly available broker registration information before opening a demat account.
         </p>
 
         <p>
           We organise publicly available information about SEBI registered brokers and present it in a clean, searchable format. 
           The site is built to help users compare brokers by type (discount vs full-service), city, and other basic attributes.
+        </p>
+
+        <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-3">
+          Who runs NiveshCheck
+        </h2>
+        <p>
+          NiveshCheck is independently operated by a single publisher under the NiveshCheck Editorial Team label. We organise information for reference purposes and do not provide investment advice, recommendations, or broker endorsements.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-3">
@@ -39,7 +47,7 @@ export default function AboutPage() {
           <li>List SEBI registered stock brokers</li>
           <li>Organise them by city and broker type</li>
           <li>Provide basic information such as registration number, segments, and website</li>
-          <li>Help users find brokers that match their needs</li>
+          <li>Help users find and compare publicly available broker information</li>
         </ul>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-3">
@@ -61,7 +69,11 @@ export default function AboutPage() {
         </p>
 
         <p className="pt-4">
-          If you find any incorrect information on this site, please let us know so we can correct it.
+          If you find any incorrect information on this site, please email{" "}
+          <a href="mailto:hello@niveshcheck.in" className="text-blue-600 hover:underline">
+            hello@niveshcheck.in
+          </a>{" "}
+          so we can review it.
         </p>
       </div>
 

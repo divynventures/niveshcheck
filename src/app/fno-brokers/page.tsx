@@ -1,15 +1,17 @@
 import Link from "next/link";
 import brokersData from "@/data/brokers.json";
+import { createPageMetadata } from "@/lib/metadata";
 import { Broker } from "@/lib/types";
 import BrokerCard from "@/components/BrokerCard";
 
 const brokers = brokersData as Broker[];
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title: "Best F&O Brokers in India (2026)",
   description:
     "List of SEBI registered stock brokers in India that offer Futures & Options (F&O) trading. Compare brokers for derivatives.",
-};
+  pathname: "/fno-brokers",
+});
 
 export default function FnoBrokersPage() {
   const fnoBrokers = brokers.filter((b) =>
