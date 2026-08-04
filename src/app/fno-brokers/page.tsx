@@ -15,7 +15,7 @@ export const metadata = createPageMetadata({
 
 export default function FnoBrokersPage() {
   const fnoBrokers = brokers.filter((b) =>
-    b.segments.some(
+    b.segments?.some(
       (s) =>
         s.toLowerCase().includes("f&o") ||
         s.toLowerCase().includes("futures") ||

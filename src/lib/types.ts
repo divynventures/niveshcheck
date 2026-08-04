@@ -12,8 +12,8 @@ export interface Broker {
   phone?: string;
   email?: string;
   website?: string;
-  segments: string[];
+  segments?: string[];
   exchanges: string[];
-  type: "Discount" | "Full-service" | "Bank";
-  description: string;
+  type?: "Discount" | "Full-service" | "Bank";
+  description?: string;
 }

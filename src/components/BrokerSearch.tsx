@@ -14,7 +14,7 @@ export default function BrokerSearch({ brokers }: { brokers: Broker[] }) {
       broker.name.toLowerCase().includes(query) ||
       broker.city.toLowerCase().includes(query) ||
       broker.sebiRegNo.toLowerCase().includes(query) ||
-      broker.type.toLowerCase().includes(query)
+      (broker.type?.toLowerCase().includes(query) ?? false)
     );
   });
 
