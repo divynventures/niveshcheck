@@ -1631,5 +1631,1166 @@
       "exchanges": [
         "NSE"
       ]
+  },
+    {
+      "id": "1fc-securities-private-limited",
+      "name": "1FC SECURITIES PRIVATE LIMITED",
+      "tradeName": "1FC SECURITIES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000333130",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000333130",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "1fc-securities-private-limited",
+      "address": "1201, East Point, B-wing,  12th Floor, 90 feet road, Mumbai",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "amity-holdings-private-limited",
+      "name": "AMITY HOLDINGS PRIVATE LIMITED",
+      "tradeName": "AMITY HOLDINGS PRIVATE LIMITED",
+      "sebiRegNo": "INZ000326834",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000326834",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "amity-holdings-private-limited",
+      "address": "128 129 12th floor Mittal Chambrt Nariman Point Mumbai",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "MSEI"
+      ]
+    },
+    {
+      "id": "arun-porecha",
+      "name": "ARUN PORECHA",
+      "tradeName": "ARUN PORECHA",
+      "sebiRegNo": "INZ000229812",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000229812",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "arun-porecha",
+      "address": "PG-14, Rotunda Bldg, Stock Exchange B.S. Marg, Fort, Mumbai 400001",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "balkishan-mohta",
+      "name": "BALKISHAN MOHTA",
+      "tradeName": "BALKISHAN MOHTA",
+      "sebiRegNo": "INZ000226717",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000226717",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "balkishan-mohta",
+      "address": "R-623, ROTUNDA BUILDING, MUMBAI SAMACHAR MARG (APOLLO STREET)",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "banhem-securities-pvt-ltd",
+      "name": "BANHEM SECURITIES PVT. LTD.",
+      "tradeName": "BANHEM SECURITIES PVT. LTD.",
+      "sebiRegNo": "INZ000281030",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000281030",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "banhem-securities-pvt-ltd",
+      "address": "312, VEENA CHAMBERS, 21,DALAL STREET, MUMBAI CITY",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "bhaidas-maganlal-co",
+      "name": "VINAY JITENDRA MASHRUWALA",
+      "tradeName": "BHAIDAS MAGANLAL & CO",
+      "sebiRegNo": "INZ000234315",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000234315",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "bhaidas-maganlal-co",
+      "address": "PS-11 ROTUNDA, 2ND FLOOR STOCK EXCHANGE ANNEXE, 60 MUMBAI SAMACHAR MARG",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "bajaj-financial-securities-limited",
+      "name": "Bajaj Financial Securities Limited",
+      "tradeName": "Bajaj Financial Securities Limited",
+      "sebiRegNo": "INZ000218931",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000218931",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "bajaj-financial-securities-limited",
+      "address": "Bajaj Auto Limited Complex, Mumbai-Pune Road, Akurdi",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "chhotalal-devchand-parikh-son",
+      "name": "AJIT CHHOTALAL PAREKH",
+      "tradeName": "CHHOTALAL DEVCHAND PARIKH & SON",
+      "sebiRegNo": "INZ000226812",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000226812",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "chhotalal-devchand-parikh-son",
+      "address": "629, Rotunda Building, Mumbai  Samachar Marg, Fort",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "d-p-vora-securities-pvt-ltd",
+      "name": "D. P. VORA SECURITIES PVT. LTD.",
+      "tradeName": "D. P. VORA SECURITIES PVT. LTD.",
+      "sebiRegNo": "INZ000253531",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000253531",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "d-p-vora-securities-pvt-ltd",
+      "address": "21/22B , KHATAU BUILDING, A.D.MODI MARG,  FORT, MUMBAI-23",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "d-k-modi-securities-pvt-ltd",
+      "name": "D.K.MODI SECURITIES PVT.LTD.",
+      "tradeName": "D.K.MODI SECURITIES PVT.LTD.",
+      "sebiRegNo": "INZ000233437",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000233437",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "d-k-modi-securities-pvt-ltd",
+      "address": "515, ROTUNDA BLDG, MUMBAI SAMACHAR MARG, FORT,",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "inaraa-financial-services-private-limited",
+      "name": "INARAA FINANCIAL SERVICES PRIVATE LIMITED",
+      "tradeName": "INARAA FINANCIAL SERVICES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000323030",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000323030",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "inaraa-financial-services-private-limited",
+      "address": "405 & 406 ROXY CHAMBERS, MAMA PARMANAND RD GIRGAON Opera House, Mumbai",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "jagdish-dalal-shares-securities-pvt-ltd",
+      "name": "JAGDISH DALAL SHARES & SECURITIES PVT. LTD.",
+      "tradeName": "JAGDISH DALAL SHARES & SECURITIES PVT. LTD.",
+      "sebiRegNo": "INZ000232537",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000232537",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "jagdish-dalal-shares-securities-pvt-ltd",
+      "address": "2nd Floor, Engineer House, 86, Mumbai Samachar Marg, Fort,",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "kedia-capital-services-private-ltd",
+      "name": "KEDIA CAPITAL SERVICES PRIVATE LTD.",
+      "tradeName": "KEDIA CAPITAL SERVICES PRIVATE LTD.",
+      "sebiRegNo": "INZ000042238",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000042238",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "kedia-capital-services-private-ltd",
+      "address": "Aadinath Commercial, Opposite. Mumbai University  Vasant Valley Road, Khadakpada",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "m-j-patel-share-stock-brokers-ltd",
+      "name": "M J PATEL SHARE & STOCK BROKERS LTD",
+      "tradeName": "M J PATEL SHARE & STOCK BROKERS LTD",
+      "sebiRegNo": "INZ000218338",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000218338",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "m-j-patel-share-stock-brokers-ltd",
+      "address": "PG-4,Rotunda Bldg., Dalal Street, Mumbai",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "m-p-vora-shares-securities-private-limited",
+      "name": "M. P. VORA SHARES & SECURITIES PRIVATE LIMITED",
+      "tradeName": "M. P. VORA SHARES & SECURITIES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000206637",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000206637",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "m-p-vora-shares-securities-private-limited",
+      "address": "413,Rotunda Bldg., Mumbai Samachar Marg,",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "manharlal-shantilal",
+      "name": "NILESH MANHARLAL MEHTA",
+      "tradeName": "MANHARLAL SHANTILAL",
+      "sebiRegNo": "INZ000226221",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000226221",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "manharlal-shantilal",
+      "address": "R-607, ROTUNDA, 6TH FLOOR MUMBAI SAMACHAR MARG, FORT",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "pjp-stock-broking-llp",
+      "name": "PJP STOCK BROKING LLP",
+      "tradeName": "PJP STOCK BROKING LLP",
+      "sebiRegNo": "INZ000324155",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000324155",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "pjp-stock-broking-llp",
+      "address": "425 DHEERAJ HERITAGE, FOURTH FLOOR, S.V.ROAD, OPP MILAN MALL SANTACRUZ (WEST), MUMBAI",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "pawan-parmeshwar-capital-private-limited",
+      "name": "Pawan Parmeshwar Capital Private Limited",
+      "tradeName": "Pawan Parmeshwar Capital Private Limited",
+      "sebiRegNo": "INZ000325937",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000325937",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "pawan-parmeshwar-capital-private-limited",
+      "address": "4TH FLOOR SINGHANIA WADI 187 DADY SETH AGYARI LANE, MUMBAI, Maharashtra",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "sonawala-global-equities-private-limited",
+      "name": "SONAWALA GLOBAL EQUITIES PRIVATE LIMITED",
+      "tradeName": "SONAWALA GLOBAL EQUITIES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000279713",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000279713",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "sonawala-global-equities-private-limited",
+      "address": "165B, FLOOR 2ND, Plot 165B, F/14, GRD to 3rd, Sonawala Estate, Patthe Bapurao Marg, Vasantrao Naik Chowk, Sonawala Compound, Grant Road, Tardeo, Mumbai",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "touchstone-capital-market-services-pvt-ltd",
+      "name": "TOUCHSTONE CAPITAL MARKET SERVICES PVT. LTD",
+      "tradeName": "TOUCHSTONE CAPITAL MARKET SERVICES PVT. LTD",
+      "sebiRegNo": "INZ000272831",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000272831",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "touchstone-capital-market-services-pvt-ltd",
+      "address": "21/22, KHATAU BUILDING, 1ST FLOOR, A.D. MODY MARG, OPP. BOMBAY STOCK EXCHANGE, FORT MUMBAI CITY",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "dexif-security-broking-private-limited",
+      "name": "DEXIF SECURITY BROKING PRIVATE LIMITED",
+      "tradeName": "DEXIF SECURITY BROKING PRIVATE LIMITED",
+      "sebiRegNo": "INZ000320338",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000320338",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "dexif-security-broking-private-limited",
+      "address": "B-68, FIRST FLOOR, GULMOHAR PARK, NEW DELHI,",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "shannon-finserve-private-limited",
+      "name": "SHANNON FINSERVE PRIVATE LIMITED",
+      "tradeName": "SHANNON FINSERVE PRIVATE LIMITED",
+      "sebiRegNo": "INZ000326131",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000326131",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "shannon-finserve-private-limited",
+      "address": "902, CABIN NO.3, IX FLOOR, NEW DELHI HOUSE, 27, BARAKHAMBA ROAD, CONNAUGHT PLACE, CENTRAL DELHI",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "acme-capital-market-limited",
+      "name": "ACME CAPITAL MARKET LIMITED",
+      "tradeName": "ACME CAPITAL MARKET LIMITED",
+      "sebiRegNo": "INZ000311839",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000311839",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "acme-capital-market-limited",
+      "address": "405, 4TH FLOOR, M-3, AVG BHAWAN, MIDDLE CIRCLE, CONNAUGHT PLACE, CENTRAL DELHI",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "BSE",
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "devanshu-infin-private-limited",
+      "name": "DEVANSHU INFIN PRIVATE LIMITED",
+      "tradeName": "DEVANSHU INFIN PRIVATE LIMITED",
+      "sebiRegNo": "INZ000235231",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000235231",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "devanshu-infin-private-limited",
+      "address": "4596/7, MAHAVIR NIWAS,IIND FLOOR, 11, DARYAGANJ,EAST DELHI",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "hrj-stock-brokers-llp",
+      "name": "HRJ Stock Brokers LLP",
+      "tradeName": "HRJ Stock Brokers LLP",
+      "sebiRegNo": "INZ000327759",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000327759",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "hrj-stock-brokers-llp",
+      "address": "Plot No-7,2nd Floor, KP Block, Pankaj Tower, Pitampura, Saraswati Vihar, Northwest, Delhi",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "kapila-securities-pvt-ltd",
+      "name": "KAPILA SECURITIES PVT. LTD.",
+      "tradeName": "KAPILA SECURITIES PVT. LTD.",
+      "sebiRegNo": "INZ000181731",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000181731",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "kapila-securities-pvt-ltd",
+      "address": "24/4866 ANSARI ROAD,SHEELTARA HOUSE DARYA GANJ,EAST DELHI",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "nhbt-securities-private-limited",
+      "name": "NHBT Securities Private Limited",
+      "tradeName": "NHBT Securities Private Limited",
+      "sebiRegNo": "INZ000222935",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000222935",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "nhbt-securities-private-limited",
+      "address": "91, Springboard Business Hub Pvt. Ltd. 90B, Delhi-Jaipur Expressway, Sector-18",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "share-wise-equity-brokers-pvt-ltd",
+      "name": "SHARE WISE EQUITY BROKERS PVT.LTD.",
+      "tradeName": "SHARE WISE EQUITY BROKERS PVT.LTD.",
+      "sebiRegNo": "INZ000300631",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000300631",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "share-wise-equity-brokers-pvt-ltd",
+      "address": "B-8, THIRD FLOOR, GUJRANWALA TOWN, Part-1, Delhi",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "spfl-securities-limited",
+      "name": "SPFL SECURITIES LIMITED",
+      "tradeName": "SPFL SECURITIES LIMITED",
+      "sebiRegNo": "INZ000214237",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000214237",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "spfl-securities-limited",
+      "address": "A-1662,STREET NO. 15, G.F., GOVIND PURI, KALKA JI,EAST DELHI",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "standard-stock-brokers-ltd",
+      "name": "STANDARD STOCK BROKERS LTD.",
+      "tradeName": "STANDARD STOCK BROKERS LTD.",
+      "sebiRegNo": "INZ000255932",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000255932",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "standard-stock-brokers-ltd",
+      "address": "N-13, GROUND FLOOR, SOUTH EXTENSTION PART-1, DELHI",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "victory-financial-services-ltd",
+      "name": "VICTORY FINANCIAL SERVICES LTD.",
+      "tradeName": "VICTORY FINANCIAL SERVICES LTD.",
+      "sebiRegNo": "INZ000255831",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000255831",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "victory-financial-services-ltd",
+      "address": "1ST FLOOR 24,SCHOOL LANE BENGALI MARKET EAST DELHI",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "vishwas-fincap-services-private-limited",
+      "name": "VISHWAS FINCAP SERVICES PRIVATE LIMITED",
+      "tradeName": "VISHWAS FINCAP SERVICES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000189835",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000189835",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "vishwas-fincap-services-private-limited",
+      "address": "310, Nangal Raya,   Jail Road, Delhi Cantt.,",
+      "city": "Delhi",
+      "state": "Delhi",
+      "exchanges": [
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "bhartia-stock-broking-pvt-ltd",
+      "name": "BHARTIA STOCK BROKING PVT. LTD.",
+      "tradeName": "BHARTIA STOCK BROKING PVT. LTD.",
+      "sebiRegNo": "INZ000205630",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000205630",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "bhartia-stock-broking-pvt-ltd",
+      "address": "Shakti Tower, EN-60, Salt Lake, Sector V 2nd Floor, Street No-4, Kolkata",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "j-v-s-securities-private-limited",
+      "name": "J.V.S. SECURITIES PRIVATE LIMITED",
+      "tradeName": "J.V.S. SECURITIES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000281635",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000281635",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "j-v-s-securities-private-limited",
+      "address": "29,MARTIN BURN BUILDING,4TH FLOOR,1,R.N.MUKHERJEE ROAD,KOLKATA",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "sankalp-share-brokers-private-limited",
+      "name": "SANKALP SHARE BROKERS PRIVATE LIMITED",
+      "tradeName": "SANKALP SHARE BROKERS PRIVATE LIMITED",
+      "sebiRegNo": "INZ000285732",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000285732",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "sankalp-share-brokers-private-limited",
+      "address": "ROOM NO. 313,14, NETAJI SUBHAS ROAD,3RD FLOOR,KOLKATA",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "silver-stream-equities-private-limited",
+      "name": "SILVER STREAM EQUITIES PRIVATE LIMITED",
+      "tradeName": "SILVER STREAM EQUITIES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000198335",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000198335",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "silver-stream-equities-private-limited",
+      "address": "Unit No.1516, to 1517 Ahmedabad Gift City, 1513-1517, DSCCSL, Tower  (53E) Road-5E, Block No. 53 Zone-5,",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "uae-exchange-finance-ltd",
+      "name": "UAE EXCHANGE & FINANCE LTD.",
+      "tradeName": "UAE EXCHANGE & FINANCE LTD.",
+      "sebiRegNo": "INZ000196935",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000196935",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "uae-exchange-finance-ltd",
+      "address": "63, OLD NO 7, ARTILLERY ROAD, ULSOOR BANGALORE,",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "hem-finlease-pvt-ltd",
+      "name": "HEM FINLEASE PVT. LTD.",
+      "tradeName": "HEM FINLEASE PVT. LTD.",
+      "sebiRegNo": "INZ000167734",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000167734",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "hem-finlease-pvt-ltd",
+      "address": "203, JAIPUR TOWER, OPP. A.I.R., M.I. ROAD,",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "mlb-stock-broking-private-limited",
+      "name": "MLB STOCK BROKING PRIVATE LIMITED",
+      "tradeName": "MLB STOCK BROKING PRIVATE LIMITED",
+      "sebiRegNo": "INZ000305131",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000305131",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "mlb-stock-broking-private-limited",
+      "address": "OFFICE NO 901, 902, 9TH FLOOR, MALL OF JAIPUR, PLOT NO 1 KUBER COMPLEX, GANDHI PANTH, VAISHALI NAGAR",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "sanchit-financial-management-services-ltd",
+      "name": "SANCHIT FINANCIAL & MANAGEMENT SERVICES LTD.",
+      "tradeName": "SANCHIT FINANCIAL & MANAGEMENT SERVICES LTD.",
+      "sebiRegNo": "INZ000295835",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000295835",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "sanchit-financial-management-services-ltd",
+      "address": "U-6 Krishna Apartment, Hathi Babu Marg  Bani Park, Jaipur, Rajasthan",
+      "city": "Jaipur",
+      "state": "Rajasthan",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "m-s-rushabh-investments",
+      "name": "RUSHABH INVESTMENTS",
+      "tradeName": "M/S. RUSHABH INVESTMENTS",
+      "sebiRegNo": "INZ000242722",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000242722",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "m-s-rushabh-investments",
+      "address": "4, JAMEEN APPARTMENT, 1ST FLOOR PUNE ROAD, NR CROMA SHOWROOM, NASHIK",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "arya-fin-trade-services-india-private-limited",
+      "name": "ARYA FIN-TRADE SERVICES (INDIA) PRIVATE LIMITED",
+      "tradeName": "ARYA FIN-TRADE SERVICES (INDIA) PRIVATE LIMITED",
+      "sebiRegNo": "INZ000181536",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000181536",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "arya-fin-trade-services-india-private-limited",
+      "address": "Office No.4, 15th Floor,GIFT One Tower Block No. 56 Road- 5C Zone-5 GIFT Gandhinagar Gujarat  382355",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI"
+      ]
+    },
+    {
+      "id": "bhumika-consultancy-private-limited",
+      "name": "BHUMIKA CONSULTANCY PRIVATE LIMITED",
+      "tradeName": "BHUMIKA CONSULTANCY PRIVATE LIMITED",
+      "sebiRegNo": "INZ000201830",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000201830",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "bhumika-consultancy-private-limited",
+      "address": "3RD, 1E, GIFT ONE BUILDING,  ROAD 5, ZONE 5, GIFT CITY, Gandhinagar",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI"
+      ]
+    },
+    {
+      "id": "crosseas-capital-markets-private-limited",
+      "name": "Crosseas Capital Markets Private Limited",
+      "tradeName": "Crosseas Capital Markets Private Limited",
+      "sebiRegNo": "INZ000201133",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000201133",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "crosseas-capital-markets-private-limited",
+      "address": "805 806  806A 8TH FLOOR, DALAL STREET COMMERCIAL CO-OP SOC LTD. ROAD 5E BLOCK 53 BUILDING NO 53(E) ZONE 5, GIFT CITY GANDHINAGAR,",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI"
+      ]
+    },
+    {
+      "id": "dolat-algotech-limited",
+      "name": "DOLAT ALGOTECH LIMITED",
+      "tradeName": "DOLAT ALGOTECH LIMITED",
+      "sebiRegNo": "INZ000285038",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000285038",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "dolat-algotech-limited",
+      "address": "1405-1406, Dalal Street Commercial Co-op Soc Ltd, Block 53 (Bldg No.53E) Zone-5, Road-5E, GIFT CITY, GANDHINAGAR",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "estee-advisors-private-limited",
+      "name": "ESTEE ADVISORS PRIVATE LIMITED",
+      "tradeName": "ESTEE ADVISORS PRIVATE LIMITED",
+      "sebiRegNo": "INZ000300737",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000300737",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "estee-advisors-private-limited",
+      "address": "PO5-01A, PO5-01B, PO5-01C 5TH FLOOR, TOWER A, WTC GIFT CITY BLOCK-51, ROAD 5E, ZONE 5, GANDHINAGAR",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "findoc-investmart-private-limited",
+      "name": "FINDOC INVESTMART PRIVATE LIMITED",
+      "tradeName": "FINDOC INVESTMART PRIVATE LIMITED",
+      "sebiRegNo": "INZ000164436",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000164436",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "findoc-investmart-private-limited",
+      "address": "1210,1211,1212,1213,1213A EXCHANGE PLAZA, NEAR MERCURY HOTEL, OPP.WTC TOWER,GIFT CITY, GIFT CITY GANDHINAGAR",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI"
+      ]
+    },
+    {
+      "id": "karamazov-quants-llp",
+      "name": "KARAMAZOV QUANTS LLP",
+      "tradeName": "KARAMAZOV QUANTS LLP",
+      "sebiRegNo": "INZ000315955",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000315955",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "karamazov-quants-llp",
+      "address": "Unit No. P03-02B, 3rd floor, Tower A, WTC Gift City Block No.51, Road 5E, Zone 5, Gift City, Gandhinagar",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "kifs-trade-capital-private-limited",
+      "name": "KIFS TRADE CAPITAL PRIVATE LIMITED",
+      "tradeName": "KIFS TRADE CAPITAL PRIVATE LIMITED",
+      "sebiRegNo": "INZ000004234",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000004234",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "kifs-trade-capital-private-limited",
+      "address": "Office Nos. PO6-01A, 01B and 01C, 01D, 6th Floor, WTC Tower-A, Block No. 51,  Road 5 E, Zone 5, Gift City, GANDHINAGAR",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "marwadi-shares-and-finance-limited",
+      "name": "MARWADI SHARES AND FINANCE LIMITED",
+      "tradeName": "MARWADI SHARES AND FINANCE LIMITED",
+      "sebiRegNo": "INZ000174730",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000174730",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "marwadi-shares-and-finance-limited",
+      "address": "Unit Office No 1 Mcx Office, 17th Floor, Unit No. 1 & 2 Gift One Tower, S. C. Road, Zone- 5,  Gift City, Gandhinagar",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "raghunandan-capital-private-limited",
+      "name": "RAGHUNANDAN CAPITAL PRIVATE LIMITED",
+      "tradeName": "RAGHUNANDAN CAPITAL PRIVATE LIMITED",
+      "sebiRegNo": "INZ000307234",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000307234",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "raghunandan-capital-private-limited",
+      "address": "UNIT 601 TO 602 A, 6TH FLOOR, DSCCSL (53E), ROAD 5C, BLOCK 53, ZONE 5, DTA, GANDHINAGAR, GUJARAT",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "ridhi-share-brokers-private-limited",
+      "name": "RIDHI SHARE BROKERS PRIVATE LIMITED",
+      "tradeName": "RIDHI SHARE BROKERS PRIVATE LIMITED",
+      "sebiRegNo": "INZ000285935",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000285935",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "ridhi-share-brokers-private-limited",
+      "address": "A-40 A,BAJAJ NAGAR OPP. GANDHINAGAR RAILWAY STATION",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI"
+      ]
+    },
+    {
+      "id": "univest-stock-broking-private-limited",
+      "name": "UNIVEST STOCK BROKING PRIVATE LIMITED",
+      "tradeName": "UNIVEST STOCK BROKING PRIVATE LIMITED",
+      "sebiRegNo": "INZ000317437",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000317437",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "univest-stock-broking-private-limited",
+      "address": "123, F.F. PLOT NO.- R/9 & 10, SHARAN BUSINESS,   SECTOR 26, GANDHINAGAR,",
+      "city": "Gandhinagar",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "frontline-stock-brokers-private-limited",
+      "name": "FRONTLINE STOCK BROKERS PRIVATE LIMITED",
+      "tradeName": "FRONTLINE STOCK BROKERS PRIVATE LIMITED",
+      "sebiRegNo": "INZ000179633",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000179633",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "frontline-stock-brokers-private-limited",
+      "address": "B-22 SECTOR-4 NOIDA",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "nx-block-trades-private-limited",
+      "name": "NX Block Trades Private Limited",
+      "tradeName": "NX Block Trades Private Limited",
+      "sebiRegNo": "INZ000308934",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000308934",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "nx-block-trades-private-limited",
+      "address": "6th Floor, Urmila Business Park 95B, Sector - 136, Noida, Gautam Budh Nagar",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "exchanges": [
+        "BSE",
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "profitmart-securities-private-limited",
+      "name": "PROFITMART SECURITIES PRIVATE LIMITED",
+      "tradeName": "PROFITMART SECURITIES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000093633",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000093633",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "profitmart-securities-private-limited",
+      "address": "Unit No. 213, Opal Square,  Plot No. C-1, Thane East",
+      "city": "Thane",
+      "state": "Maharashtra",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "stellaredge-brokers-private-limited",
+      "name": "STELLAREDGE BROKERS PRIVATE LIMITED",
+      "tradeName": "STELLAREDGE BROKERS PRIVATE LIMITED",
+      "sebiRegNo": "INZ000321036",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000321036",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "stellaredge-brokers-private-limited",
+      "address": "7, Amit, Vishwakarma Society Majura Gate, Sagrampura Putli, Surat",
+      "city": "Surat",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "vijit-global-securities-private-limited",
+      "name": "VIJIT GLOBAL SECURITIES PRIVATE LIMITED",
+      "tradeName": "VIJIT GLOBAL SECURITIES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000300834",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000300834",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "vijit-global-securities-private-limited",
+      "address": "401, Amar Darshan Building  28/2 Old Palasia, Indore",
+      "city": "Indore",
+      "state": "Madhya Pradesh",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "fortune-fiscal-ltd",
+      "name": "FORTUNE FISCAL LTD",
+      "tradeName": "FORTUNE FISCAL LTD",
+      "sebiRegNo": "INZ000247236",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000247236",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "fortune-fiscal-ltd",
+      "address": "208, Bluechip Complex,  Sayajigunj, Vadodara",
+      "city": "Vadodara",
+      "state": "Gujarat",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "jhaveri-securities-limited",
+      "name": "JHAVERI SECURITIES LIMITED",
+      "tradeName": "JHAVERI SECURITIES LIMITED",
+      "sebiRegNo": "INZ000199232",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000199232",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "jhaveri-securities-limited",
+      "address": "301, PAYAL TOWERS , SAYAJIGUNJ,VADODARA",
+      "city": "Vadodara",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "tecstox",
+      "name": "TECSTOX SECURITIES PRIVATE LIMITED",
+      "tradeName": "TECSTOX",
+      "sebiRegNo": "INZ000328032",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000328032",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "tecstox",
+      "address": "411, Atlantis Height, Sarabhai Compound Subhanpura, Vadodara",
+      "city": "Vadodara",
+      "state": "Gujarat",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "a-p-t-research-private-limited",
+      "name": "A.P.T. RESEARCH PRIVATE LIMITED",
+      "tradeName": "A.P.T. RESEARCH PRIVATE LIMITED",
+      "sebiRegNo": "INZ000194330",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000194330",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "a-p-t-research-private-limited",
+      "address": "UNIT NO. 303A, 303B, 304A & 304B THRID FLOOR TOWER A, WTC, GIFT CITY,BLOCK NO. -51,  ROAD-5E, ZONE -5, GIFT CITY",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "achintya-commodities-pvt-ltd",
+      "name": "ACHINTYA COMMODITIES PVT LTD",
+      "tradeName": "ACHINTYA COMMODITIES PVT LTD",
+      "sebiRegNo": "INZ000015535",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000015535",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "achintya-commodities-pvt-ltd",
+      "address": "12th Floor, Unit No 1209, Dalal Street, Block No 53, Building No. 53E, Road-5E, Zone-5, Gift City,",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "achintya-securities-limited",
+      "name": "ACHINTYA SECURITIES LIMITED",
+      "tradeName": "ACHINTYA SECURITIES LIMITED",
+      "sebiRegNo": "INZ000009837",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000009837",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "achintya-securities-limited",
+      "address": "27th Floor, Unit No. 2, Gift Two Tower Block No. 56, Road 5C, Zone 5, GIFT City",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "algoquant-global-securities-private-limited",
+      "name": "ALGOQUANT GLOBAL SECURITIES PRIVATE LIMITED",
+      "tradeName": "ALGOQUANT GLOBAL SECURITIES PRIVATE LIMITED",
+      "sebiRegNo": "INZ000331734",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000331734",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "algoquant-global-securities-private-limited",
+      "address": "UNIT NO. 503B, TOWER A, 5TH FLOOR OF WTC, ZONE-5, GIFT CITY,",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "anand-rathi-global-intermediaries-limited",
+      "name": "ANAND RATHI GLOBAL INTERMEDIARIES LIMITED",
+      "tradeName": "ANAND RATHI GLOBAL INTERMEDIARIES LIMITED",
+      "sebiRegNo": "INZ000327038",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000327038",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "anand-rathi-global-intermediaries-limited",
+      "address": "1003-1012, DALAL STREET, COMMERCIAL CO. OP. SOC., BLOCK 53E, ZONE 5, GIFT CITY,",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "NSE"
+      ]
+    },
+    {
+      "id": "ans-pvt-ltd",
+      "name": "ANS PVT. LTD.",
+      "tradeName": "ANS PVT. LTD.",
+      "sebiRegNo": "INZ000196431",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000196431",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "ans-pvt-ltd",
+      "address": "501, 502 and 502A, 5th Floor, DSCCL(53E), Block 53, Road 5 E, Zone 5, Gift City,",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "apex-fingrow-private-limited",
+      "name": "APEX FINGROW PRIVATE LIMITED",
+      "tradeName": "APEX FINGROW PRIVATE LIMITED",
+      "sebiRegNo": "INZ000318730",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000318730",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "apex-fingrow-private-limited",
+      "address": "OFFICE NO.104, 105 AND 106, X CHANGE PLAZA,  DALAL CHS, GIFT CITY,",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "NSE"
+      ]
+    },
+    {
+      "id": "arham-wealth-management-private-limited",
+      "name": "ARHAM WEALTH MANAGEMENT PRIVATE LIMITED",
+      "tradeName": "ARHAM WEALTH MANAGEMENT PRIVATE LIMITED",
+      "sebiRegNo": "INZ000189034",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000189034",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "arham-wealth-management-private-limited",
+      "address": "UNIT NO 1,27TH FLOOR, GIFT TWO BUILDING BLOCK NO 56,ROAD 5C,ZONE 5,GIFT CITY",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "algoquant-fintech-limited",
+      "name": "Algoquant Fintech Limited",
+      "tradeName": "Algoquant Fintech Limited",
+      "sebiRegNo": "INZ000326631",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000326631",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "algoquant-fintech-limited",
+      "address": "UNIT NO 503A-B, 504A-B TOWER A, WTC, FIFTH FLOOR, BLOCK NO. 51, ROAD 5E, ZONE-5, GIFT CITY",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "bhansali-value-creations-private-limited",
+      "name": "BHANSALI VALUE  CREATIONS PRIVATE LIMITED",
+      "tradeName": "BHANSALI VALUE  CREATIONS PRIVATE LIMITED",
+      "sebiRegNo": "INZ000245833",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000245833",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "bhansali-value-creations-private-limited",
+      "address": "507 508  508 A, 5th Floor DSCCSL(53E) Road 5EBlock 53, Zone 5, DTA, Gift City,",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI"
+      ]
+    },
+    {
+      "id": "db-international-stock-brokers-limited",
+      "name": "DB (INTERNATIONAL) STOCK BROKERS LIMITED",
+      "tradeName": "DB (INTERNATIONAL) STOCK BROKERS LIMITED",
+      "sebiRegNo": "INZ000179035",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000179035",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "db-international-stock-brokers-limited",
+      "address": "Unit No. P05-02A & P05-02B, 5th Floor, Tower A World Trade Center, Block 51, Road 5E, Zone 5, GIFT CITY",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE",
+        "MSEI",
+        "NSE"
+      ]
+    },
+    {
+      "id": "divya-capital-one-private-limited",
+      "name": "DIVYA CAPITAL ONE PRIVATE LIMITED",
+      "tradeName": "DIVYA CAPITAL ONE PRIVATE LIMITED",
+      "sebiRegNo": "INZ000183738",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000183738",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "divya-capital-one-private-limited",
+      "address": "UNIT NO. PO 4-01, (ABC) 4TH FLOOR, TOWER A , WTC , GIFT CITY, BLDG. NO. 51A, BLOCK 51,ROAD 5E, GIFT CITY",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "evermore-stock-brokers-private-limited",
+      "name": "EVERMORE STOCK BROKERS PRIVATE LIMITED",
+      "tradeName": "EVERMORE STOCK BROKERS PRIVATE LIMITED",
+      "sebiRegNo": "INZ000217838",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000217838",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "evermore-stock-brokers-private-limited",
+      "address": "Unit-1-A, 15th Floor GIFT City",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "BSE"
+      ]
+    },
+    {
+      "id": "evermore-share-broking-private-limited",
+      "name": "Evermore Share Broking Private Limited",
+      "tradeName": "Evermore Share Broking Private Limited",
+      "sebiRegNo": "INZ000022431",
+      "registrationSourceUrl": "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30&regno=INZ000022431",
+      "registrationReviewedAt": "2026-07-24",
+      "slug": "evermore-share-broking-private-limited",
+      "address": "Unit-1-A, 15th Floor Tower-1, Gift City",
+      "city": "GIFT City",
+      "state": "Gujarat",
+      "exchanges": [
+        "NSE"
+      ]
     }
 ]
