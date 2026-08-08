@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import brokersData from "@/data/brokers.json";
 import { Broker } from "@/lib/types";
+import { guides } from "@/lib/guides";
 
 const brokers = brokersData as Broker[];
 const baseUrl = "https://www.niveshcheck.in";
@@ -26,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/guides`,
+      lastModified: new Date("2026-08-08"),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/about`,
@@ -87,5 +94,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...cityPages, ...brokerPages];
+  const guidePages: MetadataRoute.Sitemap = guides.map((guide) => ({
+    url: `${baseUrl}/guides/${guide.slug}`,
+    lastModified: new Date(guide.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...guidePages, ...cityPages, ...brokerPages];
 }

@@ -31,7 +31,7 @@ export default function HomePage() {
               Explore All Brokers
             </Link>
             <Link
-              href="/faq"
+              href="/guides/verify-sebi-registered-stock-broker"
               className="inline-block bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 px-8 py-3.5 rounded-xl font-medium transition"
             >
               How to check a broker
@@ -74,6 +74,26 @@ export default function HomePage() {
             <div className="text-2xl font-bold text-purple-600 mb-1">Check</div>
             <div className="font-semibold text-gray-900">Broker FAQ</div>
             <div className="text-sm text-gray-500 mt-1">How to verify a record</div>
+          </Link>
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Guides for checking and understanding accounts</h2>
+            <p className="text-gray-600 mt-2">Neutral explainers built from SEBI and exchange material.</p>
+          </div>
+          <Link href="/guides" className="text-blue-600 hover:text-blue-700 text-sm font-medium whitespace-nowrap">View guides →</Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <Link href="/guides/verify-sebi-registered-stock-broker" className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-400 hover:shadow-sm transition">
+            <h3 className="font-semibold text-gray-900 mb-2">Check a broker&apos;s registration</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">Use the official SEBI directory to check a current record.</p>
+          </Link>
+          <Link href="/guides/demat-account-vs-trading-account" className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-400 hover:shadow-sm transition">
+            <h3 className="font-semibold text-gray-900 mb-2">Demat account vs trading account</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">Understand the different roles described in SEBI&apos;s FAQ.</p>
           </Link>
         </div>
       </section>

@@ -32,6 +32,9 @@ export default function Header() {
           <Link href="/faq" className="hover:text-blue-600 transition">
             FAQ
           </Link>
+          <Link href="/guides" className="hover:text-blue-600 transition">
+            Guides
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -64,6 +67,9 @@ export default function Header() {
             </Link>
             <Link href="/faq" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
               FAQ
+            </Link>
+            <Link href="/guides" onClick={() => setIsOpen(false)} className="py-2 hover:text-blue-600">
+              Guides
             </Link>
           </nav>
         </div>
