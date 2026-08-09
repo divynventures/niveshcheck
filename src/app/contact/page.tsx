@@ -31,7 +31,7 @@ export default function ContactPage() {
           </a>.
         </p>
 
-        <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-3">
+        <h2 id="corrections" className="text-xl font-semibold text-gray-900 mt-10 mb-3">
           Reporting a correction
         </h2>
         <p>

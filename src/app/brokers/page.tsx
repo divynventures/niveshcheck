@@ -42,6 +42,11 @@ export default function BrokersPage() {
         <p className="text-gray-700 leading-relaxed mb-4">
           NiveshCheck&apos;s entries are based on published SEBI equity-segment material dated 24 July 2026. Registration details can change. Compare the broker&apos;s name and registration number with the current official SEBI directory before opening an account or relying on a listing.
         </p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          The directory records names, registration numbers, source addresses, and recorded equity
+          exchange memberships. It does not assess current status, broker quality, prices,
+          features, suitability, or activity. <Link href="/methodology" className="text-blue-700 hover:underline font-medium">Read the source scope and limitations</Link>.
+        </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
           <AnalyticsLink
             href="https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognised=yes"

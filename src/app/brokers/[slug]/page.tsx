@@ -9,6 +9,18 @@ import { Broker } from "@/lib/types";
 import AnalyticsLink from "@/components/AnalyticsLink";
 
 const brokers = brokersData as Broker[];
+const minimumIndexableCityListings = 5;
+
+function getCitySlug(city: string) {
+  return city.toLowerCase().replace(/\s+/g, "-");
+}
+
+function hasIndexableCityPage(city: string) {
+  return (
+    brokers.filter((broker) => getCitySlug(broker.city) === getCitySlug(city)).length >=
+    minimumIndexableCityListings
+  );
+}
 
 export async function generateStaticParams() {
   return brokers.map((broker) => ({
@@ -48,6 +60,7 @@ export default async function BrokerDetailPage({
   const brokerName = formatBrokerName(broker.tradeName);
   const legalName = formatBrokerName(broker.name);
   const sebiSearchUrl = broker.registrationSourceUrl ?? getSebiBrokerSearchUrl(broker.sebiRegNo);
+  const cityIsIndexable = hasIndexableCityPage(broker.city);
   const registrationReviewedAt = new Intl.DateTimeFormat("en-IN", {
     day: "numeric",
     month: "long",
@@ -191,14 +204,16 @@ export default async function BrokerDetailPage({
             <div>
               <dt className="text-gray-500 mb-1">City</dt>
               <dd className="font-semibold">
-                <Link
-                  href={`/city/${broker.city
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                  className="text-blue-600 hover:underline"
-                >
-                  {broker.city}, {broker.state}
-                </Link>
+                {cityIsIndexable ? (
+                  <Link
+                    href={`/city/${getCitySlug(broker.city)}`}
+                    className="text-blue-600 hover:underline"
+                  >
+                    View recorded broker listings in {broker.city}
+                  </Link>
+                ) : (
+                  <span className="text-gray-900">{broker.city}, {broker.state}</span>
+                )}
               </dd>
             </div>
           </dl>
@@ -222,6 +237,31 @@ export default async function BrokerDetailPage({
         >
           Search {broker.sebiRegNo} on SEBI →
         </AnalyticsLink>
+      </section>
+
+      <section className="bg-white border border-gray-200 rounded-2xl p-6 mb-10">
+        <h2 className="font-bold text-lg text-gray-900 mb-3">Use this record responsibly</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          This profile is a record of published information, not an assessment of this broker. Use
+          the official SEBI directory for the current record and read our neutral guide before
+          relying on a registration number or broker name.
+        </p>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-x-5 gap-y-3 text-sm font-medium">
+          <Link
+            href="/guides/verify-sebi-registered-stock-broker"
+            className="text-blue-700 hover:underline"
+          >
+            How to verify a broker&apos;s SEBI record
+          </Link>
+          {cityIsIndexable && (
+            <Link href={`/city/${getCitySlug(broker.city)}`} className="text-blue-700 hover:underline">
+              Recorded broker listings in {broker.city}
+            </Link>
+          )}
+          <Link href="/brokers" className="text-blue-700 hover:underline">
+            Browse all recorded broker listings
+          </Link>
+        </div>
       </section>
 
       {broker.website && (

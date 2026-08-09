@@ -24,6 +24,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const guide = getGuide(slug);
   if (!guide) notFound();
 
+  const updatedAt = new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${guide.updatedAt}T00:00:00Z`));
+
   const pageUrl = absoluteUrl(`/guides/${guide.slug}`);
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -64,7 +71,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <Link href="/guides" className="hover:text-blue-600 transition">Guides</Link><span className="mx-2">/</span>
         <span className="text-gray-800">Guide</span>
       </nav>
-      <p className="text-sm font-medium text-blue-700 mb-3">Neutral explainer · Updated 8 August 2026</p>
+      <div className="mb-3 text-sm leading-relaxed text-gray-600">
+        <p className="font-medium text-blue-700">Neutral explainer</p>
+        <p>By NiveshCheck Editorial Team · Reviewed {updatedAt}</p>
+      </div>
       <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5 leading-tight">{guide.title}</h1>
       <p className="text-lg text-gray-600 leading-relaxed mb-10">{guide.intro}</p>
 
@@ -101,6 +111,20 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             <li key={source.url}><AnalyticsLink href={source.url} target="_blank" rel="noreferrer" eventName="primary_source_click" eventParameters={{ source_publisher: source.publisher }} className="text-blue-700 hover:underline font-medium">{source.name} <span className="font-normal text-gray-600">({source.publisher})</span></AnalyticsLink></li>
           ))}
         </ul>
+      </section>
+
+      <section className="mt-8 border border-gray-200 rounded-2xl p-6">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">How this guide is prepared</h2>
+        <p className="text-gray-700 leading-relaxed">
+          This guide is maintained by the NiveshCheck Editorial Team using the primary sources
+          linked above. It is general information only and may not reflect later changes to an
+          official source or process.
+        </p>
+        <p className="mt-4 text-sm font-medium">
+          <Link href="/methodology" className="text-blue-700 hover:underline">Read our methodology and source limitations</Link>
+          <span className="text-gray-400"> · </span>
+          <Link href="/contact#corrections" className="text-blue-700 hover:underline">Suggest a factual correction</Link>
+        </p>
       </section>
 
       <p className="mt-10 text-sm text-gray-500 leading-relaxed">NiveshCheck is not affiliated with SEBI and does not independently verify, recommend, endorse, or advise on brokers, accounts, or investments.</p>

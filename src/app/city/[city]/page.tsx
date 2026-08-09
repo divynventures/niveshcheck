@@ -105,6 +105,10 @@ export default async function CityPage({
             NiveshCheck is an independent directory and does not determine a broker&apos;s current
             status, suitability, or ranking. Confirm the latest record directly with SEBI.
           </p>
+          <p>
+            A city is taken from the recorded source address. It does not establish a broker&apos;s
+            service area, branch network, or current operating location. <Link href="/methodology" className="text-blue-700 hover:underline font-medium">Read the source scope and limitations</Link>.
+          </p>
         </div>
       </div>
 

@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     template: "%s | NiveshCheck",
   },
   description:
-    "Check and compare SEBI registered stock brokers in India. Find discount and full-service brokers, best brokers by city, and more on NiveshCheck.",
+    "Search recorded SEBI stock-broker details in India and check the latest official record directly with SEBI.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "NiveshCheck – SEBI Registered Stock Brokers in India",
     description:
-      "Discover and compare SEBI registered stock brokers. Find the right broker for your needs.",
+      "An independent directory of recorded stock-broker details with links to check the latest official record with SEBI.",
     url: "https://www.niveshcheck.in",
     siteName: "NiveshCheck",
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NiveshCheck – SEBI Registered Stock Brokers",
-    description: "Check SEBI registered stock brokers in India.",
+    description: "Search recorded stock-broker details and check the latest official record with SEBI.",
   },
   robots: {
     index: true,
