@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="prose prose-gray max-w-none space-y-6 text-gray-700 leading-relaxed">
         <p>
-          This Privacy Policy explains how SEBI Brokers Directory (“we”, “us”, or “our”) collects, uses, and protects information when you visit our website.
+          This Privacy Policy explains how NiveshCheck (“we”, “us”, or “our”) collects, uses, and protects information when you visit our website.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-8">1. Information We Collect</h2>
@@ -32,6 +32,9 @@ export default function PrivacyPolicyPage() {
         </ul>
         <p>
           This information is collected through standard web server logs and analytics tools.
+        </p>
+        <p>
+          We use Google Analytics to understand aggregate use of the directory. We may measure actions such as a directory search or a click to an official SEBI source, but our custom analytics events do not send the text entered into the directory search field, broker registration numbers, account details, or other personal information.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-8">2. How We Use Information</h2>
@@ -66,7 +69,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-xl font-semibold text-gray-900 mt-8">7. Contact</h2>
         <p>
-          If you have any questions about this Privacy Policy, you can reach out through the contact details provided on this website (once available).
+          If you have any questions about this Privacy Policy, email <a href="mailto:hello@niveshcheck.in" className="text-blue-600 hover:underline">hello@niveshcheck.in</a>.
         </p>
       </div>
 

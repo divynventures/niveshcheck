@@ -32,8 +32,7 @@ export default function MethodologyPage() {
           Source of data
         </h2>
         <p>
-          The primary source of broker registration information is publicly available data 
-          published by the Securities and Exchange Board of India (SEBI) and related exchange records.
+          The primary source of broker registration information is the publicly available SEBI list of registered stock brokers in the equity segment. Each published listing links to the relevant official SEBI record and shows the date NiveshCheck reviewed the source.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-3">
@@ -42,20 +41,19 @@ export default function MethodologyPage() {
         <ul className="list-disc pl-5 space-y-2">
           <li>Broker name and trade name</li>
           <li>SEBI registration number</li>
-          <li>Registered city / address (where available)</li>
-          <li>Segments and exchanges</li>
-          <li>Website (where publicly available)</li>
-          <li>Broker type (Discount or Full-service) based on publicly known positioning</li>
+          <li>Recorded address, city, and state from the source material</li>
+          <li>Recorded equity exchange memberships from the source material</li>
+          <li>Broker website, where included as a non-affiliate convenience link</li>
         </ul>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-3">
           Important limitations
         </h2>
         <ul className="list-disc pl-5 space-y-2">
-          <li>We do not independently audit or verify brokers beyond publicly available information</li>
-          <li>Registration status can change. Always confirm on the official SEBI website</li>
-          <li>Active client numbers are approximate and based on publicly reported figures at the time of collection</li>
-          <li>We aim for accuracy but cannot guarantee that every record is complete or up-to-date at all times</li>
+          <li>We do not independently audit, certify, recommend, or endorse brokers</li>
+          <li>Registration status can change. Always confirm the latest details on the official SEBI website</li>
+          <li>The equity-segment source cannot establish broker type, active-client figures, pricing, product availability, or membership in other market segments</li>
+          <li>We aim for accuracy but cannot guarantee that every record is complete or current at all times</li>
         </ul>
 
         <h2 className="text-xl font-semibold text-gray-900 mt-10 mb-3">

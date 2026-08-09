@@ -6,6 +6,7 @@ import { formatBrokerName } from "@/lib/format-broker-name";
 import { absoluteUrl, createPageMetadata } from "@/lib/metadata";
 import { getSebiBrokerSearchUrl } from "@/lib/sebi";
 import { Broker } from "@/lib/types";
+import AnalyticsLink from "@/components/AnalyticsLink";
 
 const brokers = brokersData as Broker[];
 
@@ -163,14 +164,16 @@ export default async function BrokerDetailPage({
             <div>
               <dt className="text-gray-500 mb-1">Official source</dt>
               <dd>
-                <a
+                <AnalyticsLink
                   href={sebiSearchUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  eventName="sebi_lookup_click"
+                  eventParameters={{ entry_point: "broker_record_source" }}
                   className="font-semibold text-blue-600 hover:underline"
                 >
                   SEBI registered stock-broker directory
-                </a>
+                </AnalyticsLink>
               </dd>
             </div>
           </dl>
@@ -209,14 +212,16 @@ export default async function BrokerDetailPage({
         <p className="text-gray-700 leading-relaxed mb-4">
           NiveshCheck records the SEBI registration number above from publicly available information. Registration status can change, so check the current record directly in SEBI&apos;s registered stock-broker directory before opening an account or making a decision.
         </p>
-        <a
+        <AnalyticsLink
           href={sebiSearchUrl}
           target="_blank"
           rel="noopener noreferrer"
+          eventName="sebi_lookup_click"
+          eventParameters={{ entry_point: "broker_verification_panel" }}
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
         >
           Search {broker.sebiRegNo} on SEBI →
-        </a>
+        </AnalyticsLink>
       </section>
 
       {broker.website && (
@@ -226,14 +231,16 @@ export default async function BrokerDetailPage({
             This external link is provided for convenience. NiveshCheck does not receive
             a commission from it and does not recommend or endorse this broker.
           </p>
-          <a
+          <AnalyticsLink
             href={broker.website}
             target="_blank"
             rel="noopener noreferrer"
+            eventName="broker_website_click"
+            eventParameters={{ entry_point: "broker_record" }}
             className="inline-block text-blue-600 font-medium hover:underline"
           >
             Open broker website →
-          </a>
+          </AnalyticsLink>
         </section>
       )}
 

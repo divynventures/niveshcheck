@@ -1,13 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Broker } from "@/lib/types";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 import BrokerCard from "./BrokerCard";
 
 export default function BrokerSearch({ brokers }: { brokers: Broker[] }) {
   const [search, setSearch] = useState("");
+  const lastTrackedSearch = useRef("");
 
-  const filteredBrokers = brokers.filter((broker) => {
+  const filteredBrokers = useMemo(() => brokers.filter((broker) => {
     const query = search.toLowerCase();
     return (
       broker.tradeName.toLowerCase().includes(query) ||
@@ -16,7 +18,22 @@ export default function BrokerSearch({ brokers }: { brokers: Broker[] }) {
       broker.sebiRegNo.toLowerCase().includes(query) ||
       (broker.type?.toLowerCase().includes(query) ?? false)
     );
-  });
+  }), [brokers, search]);
+
+  useEffect(() => {
+    const normalizedSearch = search.trim().toLowerCase();
+    if (normalizedSearch.length < 2 || normalizedSearch === lastTrackedSearch.current) return;
+
+    const timeout = window.setTimeout(() => {
+      trackAnalyticsEvent("search", {
+        search_location: "broker_directory",
+        results_count: filteredBrokers.length,
+      });
+      lastTrackedSearch.current = normalizedSearch;
+    }, 700);
+
+    return () => window.clearTimeout(timeout);
+  }, [filteredBrokers.length, search]);
 
   return (
     <div>

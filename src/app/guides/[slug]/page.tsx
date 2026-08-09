@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { getGuide, guides } from "@/lib/guides";
 import { absoluteUrl, createPageMetadata } from "@/lib/metadata";
+import AnalyticsLink from "@/components/AnalyticsLink";
 
 export const dynamicParams = false;
 
@@ -97,7 +98,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <p className="text-gray-700 leading-relaxed mb-4">Read the original guidance and check for updates directly with the issuing organisation.</p>
         <ul className="space-y-3">
           {guide.sources.map((source) => (
-            <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer" className="text-blue-700 hover:underline font-medium">{source.name} <span className="font-normal text-gray-600">({source.publisher})</span></a></li>
+            <li key={source.url}><AnalyticsLink href={source.url} target="_blank" rel="noreferrer" eventName="primary_source_click" eventParameters={{ source_publisher: source.publisher }} className="text-blue-700 hover:underline font-medium">{source.name} <span className="font-normal text-gray-600">({source.publisher})</span></AnalyticsLink></li>
           ))}
         </ul>
       </section>
