@@ -216,6 +216,190 @@ export const guides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "what-is-a-sebi-registration-number",
+    title: "What Is a SEBI Registration Number for a Stock Broker?",
+    description:
+      "A neutral explanation of the registration-number field in SEBI's official stock-broker directory and how to use it when checking a record.",
+    intro:
+      "A registration number is an identifier shown in SEBI's recognised intermediaries directory. It can help you search for and compare a stock-broker record, but it is not a recommendation, guarantee, or assessment of a broker, website, account, or investment.",
+    updatedAt: "2026-08-22",
+    sections: [
+      {
+        heading: "Where the number appears",
+        paragraphs: [
+          "SEBI's recognised intermediaries directory lets users search stock-broker records by registration number as well as by member or trade name. The equity-segment results show the name, trade name, registration number, contact details, address, validity information, and exchange name for each matching record.",
+          "Use the number as one item to compare with the details you were given. Do not infer the meaning of individual characters or digits from the number unless SEBI has published that meaning for the specific context.",
+        ],
+        steps: [
+          "Ask for the broker's legal name, trade name, and registration number.",
+          "Search the number in SEBI's current recognised intermediaries directory.",
+          "Compare the returned name, trade name, and recorded contact details with the information you have.",
+          "If the result is unclear or does not match, pause and seek clarification through official channels before acting.",
+        ],
+      },
+      {
+        heading: "What a matching number does not establish",
+        paragraphs: [
+          "A matching directory record does not establish that a particular app, website, caller, payment request, offer, or social-media profile is genuine. It also does not establish that a broker, account, product, or investment is suitable for you.",
+          "SEBI's investor guidance advises investors to keep records, read documents before signing, and avoid sharing critical account information such as passwords. Treat the official record as a starting point for checking identity, not as a substitute for those precautions.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Can I use a SEBI registration number to find a stock broker?",
+        answer:
+          "Yes. SEBI's recognised intermediaries directory provides a registration-number search. Compare the result with the broker details you were given and check the current official record.",
+      },
+      {
+        question: "Does a registration number prove that a broker is safe or right for me?",
+        answer:
+          "No. It is not a recommendation, endorsement, guarantee, or suitability assessment. Review the broker's current documents and make your own decision.",
+      },
+    ],
+    sources: [
+      {
+        name: "Recognised Intermediaries directory",
+        url: "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognised=yes",
+        publisher: "SEBI",
+      },
+      {
+        name: "Registered Stock Brokers in equity segment",
+        url: "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30",
+        publisher: "SEBI",
+      },
+    ],
+  },
+  {
+    slug: "how-to-read-stock-broker-sebi-record",
+    title: "How to Read a Stock Broker's SEBI Record",
+    description:
+      "A step-by-step, neutral guide to comparing the fields in SEBI's official stock-broker directory with the details supplied by a broker.",
+    intro:
+      "SEBI's directory presents information about registered intermediaries. This guide explains how to compare that information; it does not determine a broker's current status, assess a provider, or tell you whether to open an account.",
+    updatedAt: "2026-08-22",
+    sections: [
+      {
+        heading: "Start with the current official result",
+        paragraphs: [
+          "Search the legal name, trade name, or registration number in SEBI's recognised intermediaries directory. The stock-broker record can show the name, trade name, registration number, email, telephone number, address, validity information, and exchange name.",
+          "Check the date shown by the directory and use the current result rather than relying only on an old screenshot, spreadsheet, search snippet, or third-party page.",
+        ],
+      },
+      {
+        heading: "Compare the fields you can independently check",
+        paragraphs: [
+          "Compare the legal name and trade name with the name used in the account-opening material and communications you received. A different brand or website name should be treated as a prompt to check more carefully, not as proof of a relationship.",
+          "Compare the registration number and recorded address or contact details with the information supplied to you. Where multiple exchange entries appear, they describe the exchange names shown in that SEBI result; do not assume they establish services or membership in other market segments.",
+        ],
+        steps: [
+          "Open the current SEBI result by registration number where possible.",
+          "Record the legal name, trade name, registration number, and result date.",
+          "Compare those details with the provider's current account documents and official contact details.",
+          "If there is a mismatch, do not send money or credentials until you have clarified it through independently found official contact channels.",
+        ],
+      },
+      {
+        heading: "Keep the limits of the record in mind",
+        paragraphs: [
+          "A directory record is not an endorsement, a complaint-history report, a pricing comparison, or an assessment of product features. It cannot by itself confirm whether a particular offer, app, caller, or payment instruction is legitimate.",
+          "SEBI's investor material advises investors to keep account records and review communications such as statements and contract notes. Read the specific provider's current account documents and charges before deciding whether to open an account.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Why might the same broker appear more than once in a SEBI result?",
+        answer:
+          "The directory may show more than one exchange entry for the same registration number. Compare the registration number and names rather than treating repeated exchange rows as separate brokers.",
+      },
+      {
+        question: "Can NiveshCheck interpret a SEBI record for me?",
+        answer:
+          "No. NiveshCheck provides general information only. Use the current official SEBI record and seek clarification from the relevant official channel if a detail is unclear.",
+      },
+    ],
+    sources: [
+      {
+        name: "Registered Stock Brokers in equity segment",
+        url: "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=30",
+        publisher: "SEBI",
+      },
+      {
+        name: "Do's and Don'ts of Investing in Securities Market",
+        url: "https://investor.sebi.gov.in/securities-dos_and_donts.html",
+        publisher: "SEBI Investor",
+      },
+    ],
+  },
+  {
+    slug: "what-to-check-broker-account-opening-form",
+    title: "What to Check in a Broker Account-Opening Form",
+    description:
+      "A neutral, source-backed checklist for reading stock-broker account-opening documents before signing or submitting them.",
+    intro:
+      "This checklist helps you read account-opening information. It does not recommend a broker, assess an account's suitability, or replace the provider's current documents and official guidance.",
+    updatedAt: "2026-08-22",
+    sections: [
+      {
+        heading: "Confirm who you are opening the account with",
+        paragraphs: [
+          "Before signing, compare the legal name, trade name, and registration number in the account-opening material with the current official SEBI stock-broker directory. Where a demat account is involved, identify the relevant depository participant and check its official information as applicable.",
+          "SEBI's investor material says to deal with SEBI-registered intermediaries and to read documents and conditions before signing.",
+        ],
+      },
+      {
+        heading: "Read the documents and charges",
+        paragraphs: [
+          "Read the account-opening form, terms, authorisations, risk disclosures, tariff or schedule of charges, and any linked documents supplied by the provider. Ask the provider to explain a field or charge you do not understand before you sign.",
+          "SEBI's investor guidance advises investors to note applicable charges, fees, and brokerage, and to keep records of documents signed, statements, and contract notes.",
+        ],
+        steps: [
+          "Check that your personal and bank details are complete and accurate before signing.",
+          "Do not sign blank or partly completed forms; cancel unused blank spaces where appropriate.",
+          "Keep copies of the completed forms, terms, charge information, and acknowledgements.",
+          "Confirm how you will receive statements, trade alerts, and contract notes, then review them after the account is opened.",
+        ],
+      },
+      {
+        heading: "Protect your account details",
+        paragraphs: [
+          "Do not share passwords or other critical account credentials. SEBI's investor guidance also advises keeping your contact details current and reviewing communications and account records regularly.",
+          "If a form, caller, website, or payment request seems inconsistent with the official record or the provider's independently found contact channels, stop and clarify before proceeding.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Should I sign an incomplete broker account-opening form?",
+        answer:
+          "No. SEBI's investor material advises completing required details and cancelling blanks before signing. Ask the provider to explain anything unclear first.",
+      },
+      {
+        question: "Does this checklist tell me which broker to choose?",
+        answer:
+          "No. It is a reading and record-checking checklist only. NiveshCheck does not recommend or rank brokers or accounts.",
+      },
+    ],
+    sources: [
+      {
+        name: "Investor Charter",
+        url: "https://investor.sebi.gov.in/Investor-charter.html",
+        publisher: "SEBI Investor",
+      },
+      {
+        name: "Financial Education Booklet (PDF)",
+        url: "https://investor.sebi.gov.in/pdf/downloadable-documents/Financial%20Education%20Booklet%20-%20English.pdf",
+        publisher: "SEBI Investor",
+      },
+      {
+        name: "Opening an account",
+        url: "https://www.nseindia.com/static/invest/first-time-investor-opening-an-account",
+        publisher: "NSE India",
+      },
+    ],
+  },
 ];
 
 export function getGuide(slug: string): Guide | undefined {
