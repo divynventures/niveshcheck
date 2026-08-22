@@ -7,6 +7,7 @@ import { absoluteUrl, createPageMetadata } from "@/lib/metadata";
 import { getSebiBrokerSearchUrl } from "@/lib/sebi";
 import { Broker } from "@/lib/types";
 import AnalyticsLink from "@/components/AnalyticsLink";
+import { getExchangeDirectoryByCode } from "@/lib/exchanges";
 
 const brokers = brokersData as Broker[];
 const minimumIndexableCityListings = 5;
@@ -291,12 +292,22 @@ export default async function BrokerDetailPage({
         </h2>
         <div className="flex flex-wrap gap-2">
           {broker.exchanges.map((ex) => (
-            <span
-              key={ex}
-              className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium"
-            >
-              {ex}
-            </span>
+            (() => {
+              const exchange = getExchangeDirectoryByCode(ex);
+              return exchange ? (
+                <Link
+                  key={ex}
+                  href={`/exchange/${exchange.slug}`}
+                  className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-100"
+                >
+                  Recorded {ex} entry
+                </Link>
+              ) : (
+                <span key={ex} className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
+                  {ex}
+                </span>
+              );
+            })()
           ))}
         </div>
         <p className="mt-4 text-sm text-gray-600 leading-relaxed">

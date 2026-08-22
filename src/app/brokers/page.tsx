@@ -64,6 +64,15 @@ export default function BrokersPage() {
         </div>
       </section>
 
+      <section className="bg-white border border-gray-200 rounded-2xl p-6 mb-10 max-w-4xl">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">Directory data update</h2>
+        <p className="text-gray-700 leading-relaxed">
+          The directory currently contains {brokers.length} unique registration-number records reconciled
+          against SEBI&apos;s published equity-segment source dated 21 August 2026. The source is a snapshot,
+          so a listing may change after that date. <Link href="/methodology" className="text-blue-700 hover:underline font-medium">Read the source scope, review method, and limitations</Link>.
+        </p>
+      </section>
+
       <BrokerSearch brokers={brokers} />
     </div>
   );

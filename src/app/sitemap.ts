@@ -2,71 +2,68 @@ import { MetadataRoute } from "next";
 import brokersData from "@/data/brokers.json";
 import { Broker } from "@/lib/types";
 import { guides } from "@/lib/guides";
+import { exchangeDirectories } from "@/lib/exchanges";
 
 const brokers = brokersData as Broker[];
 const baseUrl = "https://www.niveshcheck.in";
 const minimumIndexableCityListings = 5;
+const sourceReviewDate = new Date("2026-08-21");
+const directoryUpdateDate = new Date("2026-08-22");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "daily",
+      lastModified: directoryUpdateDate,
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${baseUrl}/brokers`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
+      lastModified: directoryUpdateDate,
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-08-08"),
+      lastModified: directoryUpdateDate,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/methodology`,
-      lastModified: new Date(),
+      lastModified: directoryUpdateDate,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/disclaimer`,
-      lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
     },
@@ -80,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const slug = city.toLowerCase().replace(/\s+/g, "-");
     return {
       url: `${baseUrl}/city/${slug}`,
-      lastModified: new Date(),
+      lastModified: sourceReviewDate,
       changeFrequency: "weekly",
       priority: 0.7,
     };
@@ -89,7 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Broker detail pages
   const brokerPages: MetadataRoute.Sitemap = brokers.map((broker) => ({
     url: `${baseUrl}/brokers/${broker.slug}`,
-    lastModified: new Date(),
+    lastModified: sourceReviewDate,
     changeFrequency: "monthly",
     priority: 0.6,
   }));
@@ -101,5 +98,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...guidePages, ...cityPages, ...brokerPages];
+  const exchangePages: MetadataRoute.Sitemap = exchangeDirectories.map((exchange) => ({
+    url: `${baseUrl}/exchange/${exchange.slug}`,
+    lastModified: sourceReviewDate,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...guidePages, ...exchangePages, ...cityPages, ...brokerPages];
 }
