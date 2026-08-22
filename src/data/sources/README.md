@@ -18,3 +18,13 @@ The workbook is an equity-segment snapshot. It is authoritative for the listed l
 4. Two missing equity-exchange memberships identified by the snapshot were added: Aryaman Capital and Afco Investments now include NSE as well as BSE.
 5. A city label may normalise a clearly identified locality in the official address where the workbook's city column is blank. For Batches 3 and 4, Mumbai labels are limited to records with a reviewed Mumbai locality such as Fort, Nariman Point, Andheri, Bandra, Parel, or Dalal Street; the original address remains visible on every profile.
 6. All 350 matched records show a validity end date of `Perpetual` in this snapshot. This should not be treated as a substitute for a current SEBI lookup.
+
+## `sebi-equity-brokers-2026-08-21.xls`
+
+- **Source:** SEBI, “Registered Stock Brokers in equity segment as on Aug 21, 2026”
+- **Imported unchanged:** 22 August 2026
+- **SHA-256:** `62646666bfddb2fd526745992027a595e96c1fa5fbc877c8dc5b26d9aa5ddd5e`
+- **Rows:** 4,989 broker/exchange rows
+- **Local-directory coverage:** all 350 registration numbers matched the snapshot
+
+This later equity-segment snapshot is the source for the directory's 21 August 2026 review date. It is used for the recorded legal name, trade name, address, and equity-exchange memberships. Clearing-corporation entries appearing in the workbook are not shown as equity-exchange memberships on NiveshCheck.

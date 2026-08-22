@@ -40,7 +40,7 @@ export default function BrokersPage() {
       <section className="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-10 max-w-4xl">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">Check the current official record before deciding</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          NiveshCheck&apos;s entries are based on published SEBI equity-segment material dated 24 July 2026. Registration details can change. Compare the broker&apos;s name and registration number with the current official SEBI directory before opening an account or relying on a listing.
+          NiveshCheck&apos;s entries are based on published SEBI equity-segment material dated 21 August 2026. Registration details can change. Compare the broker&apos;s name and registration number with the current official SEBI directory before opening an account or relying on a listing.
         </p>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
           The directory records names, registration numbers, source addresses, and recorded equity
