@@ -6,7 +6,7 @@
 - **Imported unchanged:** 4 August 2026
 - **SHA-256:** `f7af563cf1e596d2247f22f2462d1636cb0c4c29c3bac5ed6cb2fd93df18082b`
 - **Rows:** 4,971 broker/exchange rows
-- **Local-directory coverage:** all 350 registration numbers matched the snapshot
+- **Local-directory coverage:** all 375 registration numbers matched the snapshot
 
 The workbook is an equity-segment snapshot. It is authoritative for the listed legal name, trade name, registered/correspondence contact details, validity, and equity-exchange memberships as of its stated date. It does **not** establish F&O, currency, commodity, broker-type, active-client, or editorial-description data.
 
