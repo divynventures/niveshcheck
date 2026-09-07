@@ -9,8 +9,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">NiveshCheck</h3>
             <p className="text-sm leading-relaxed">
-              Directory of SEBI registered stock brokers in India. 
-              Helping users check and discover brokers easily.
+              Independent directory of recorded SEBI stock-broker details in India.
+              Check the current official record with SEBI before relying on a listing.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-sm text-gray-500">
           <p className="mb-2">
-            This directory lists publicly available SEBI registered stock brokers for informational purposes only.
+            This directory organises publicly available SEBI stock-broker information for informational purposes only.
           </p>
           <p>
             © 2026 NiveshCheck. Not affiliated with SEBI.

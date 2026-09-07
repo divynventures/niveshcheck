@@ -5,6 +5,7 @@ import { absoluteUrl, createPageMetadata } from "@/lib/metadata";
 import { Broker } from "@/lib/types";
 import AnalyticsLink from "@/components/AnalyticsLink";
 import BrokerSearch from "@/components/BrokerSearch";
+import { exchangeDirectories } from "@/lib/exchanges";
 
 const brokers = brokersData as Broker[];
 
@@ -71,6 +72,28 @@ export default function BrokersPage() {
           against SEBI&apos;s published equity-segment source dated 21 August 2026. The source is a snapshot,
           so a listing may change after that date. <Link href="/methodology" className="text-blue-700 hover:underline font-medium">Read the source scope, review method, and limitations</Link>.
         </p>
+      </section>
+
+      <section className="mb-10 max-w-4xl" aria-labelledby="exchange-directory-heading">
+        <h2 id="exchange-directory-heading" className="text-xl font-semibold text-gray-900 mb-3">
+          Browse by recorded equity exchange
+        </h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          These pages group records that include the named exchange in SEBI&apos;s 21 August 2026
+          equity-segment source. They do not establish a broker&apos;s current status, services, or
+          membership in another market segment.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {exchangeDirectories.map((exchange) => (
+            <Link
+              key={exchange.code}
+              href={`/exchange/${exchange.slug}`}
+              className="inline-flex items-center rounded-lg border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 hover:bg-blue-100"
+            >
+              Recorded {exchange.code} entries
+            </Link>
+          ))}
+        </div>
       </section>
 
       <BrokerSearch brokers={brokers} />

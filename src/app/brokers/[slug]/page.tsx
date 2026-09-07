@@ -43,7 +43,7 @@ export async function generateMetadata({
 
   return createPageMetadata({
     title: `${brokerName} SEBI Registration Details`,
-    description: `View NiveshCheck's recorded SEBI registration number for ${brokerName} (${broker.sebiRegNo}), based in ${broker.city}, and verify the current record directly with SEBI.`,
+    description: `View NiveshCheck's recorded SEBI registration number for ${brokerName} (${broker.sebiRegNo}), with a recorded source address in ${broker.city}, and verify the current record directly with SEBI.`,
     pathname: `/brokers/${broker.slug}`,
   });
 }
@@ -110,21 +110,11 @@ export default async function BrokerDetailPage({
       },
     ],
   };
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={schema} />
-      <JsonLd data={faqSchema} />
 
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">

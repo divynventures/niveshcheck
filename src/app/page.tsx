@@ -4,10 +4,13 @@ import { Broker } from "@/lib/types";
 import BrokerCard from "@/components/BrokerCard";
 
 const brokers = brokersData as Broker[];
+const minimumIndexableCityListings = 5;
 
 export default function HomePage() {
   const topBrokers = brokers.slice(0, 6);
-  const cities = Array.from(new Set(brokers.map((b) => b.city))).sort();
+  const cities = Array.from(new Set(brokers.map((b) => b.city)))
+    .filter((city) => brokers.filter((broker) => broker.city === city).length >= minimumIndexableCityListings)
+    .sort();
   const mumbaiBrokerCount = brokers.filter((broker) => broker.city === "Mumbai").length;
 
   return (
