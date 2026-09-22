@@ -10,9 +10,9 @@ import { exchangeDirectories } from "@/lib/exchanges";
 const brokers = brokersData as Broker[];
 
 export const metadata = createPageMetadata({
-  title: "SEBI Registered Stock Brokers List in India",
+  title: `SEBI Registered Stock Brokers List: ${brokers.length} Recorded Entries`,
   description:
-    "Search NiveshCheck's recorded list of SEBI-registered stock brokers in India by name, city, or registration number, then check the current official record with SEBI.",
+    `Browse ${brokers.length} recorded stock-broker entries from SEBI's 21 August 2026 equity-segment source. Search by name or registration number, then check SEBI's current record.`,
   pathname: "/brokers",
 });
 
